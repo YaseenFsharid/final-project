@@ -6,28 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/adminStyle.css">
     <title>Admin</title>
 </head>
 
 <body>
     <header>
-        <img src="" alt="" srcset="">
-        <h1>School portal</h1>
-        <h3></h3>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Parent </li>
-                <li>Student</li>
-                <li>About us</li>
-            </ul>
-        </nav>
+
+        <div id="logo">
+            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/100x70/000000"></a>
+        </div>
+
+        <div id="websiteTitle">
+            <h1>Elite School</h1>
+            <p>School portal</p>
+        </div>
+
+        </div>
+
+        <div id="navOptions">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div id="icons">
+            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/15x15/000000"
+                    alt="facebookIcon"></a>
+            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/15x15/000000"
+                    alt="linkedInIcon"></a>
+            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/15x15/000000"
+                    alt="instagramIcon"></a>
+
+        </div>
+
     </header>
 
     <main>
-        <section>
+
+        <section id="leftNav">
+            <h1>Welcome to the admin page.</h1>
+            <p>Please fill the form to add new students.</p>
+        </section>
+
+        <section id="studentFillForm">
+          
+       
             <form id="addStudent">
+
                 <fieldset id="personalInfo">
+                    <legend>
+                        Personal Info
+                    </legend>
                     <label for="studentName">Student name :</label>
                     <input type="text" name="stdname" id="studentName"><br> <br>
                     <label for="">Gender :</label>
@@ -82,23 +116,40 @@
 
                         </tfoot>
                     </table>
-                    <label for="feedBack"> feedback</label>
-                    <textarea name="feedback" id="" cols="30" rows="10"></textarea>
+
+                </fieldset>
+
+                <fieldset id="feedBackField">
+                    <legend>
+                        Feedback
+                    </legend>
+                    <textarea name="feedback" id="" cols="70" rows="5"></textarea>
+                </fieldset>
+                <br>
+                <fieldset id="submit">
                     <button type="submit">Add Student</button>
                 </fieldset>
+
             </form>
         </section>
-        <section>
+<section>
             <table id="studentinfo">
 
             </table>
         </section>
 
+                    
+        
+
+
     </main>
 
     <footer>
-        <p>All right reserved copyright &copy;2020</p>
-        <span>Contact Info</span>
+
+        <p>All rights reserved copyright &copy;2020</p>
+        <h5>Contact info</h5>
+
+       
     </footer>
     <!-- <script src="js/java.js"></script> -->
     <script src="js/java2.js"></script>
