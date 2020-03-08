@@ -26,19 +26,19 @@
 
     <main>
         <section>
-            <form action="">
+            <form id="addStudent">
                 <fieldset id="personalInfo">
                     <label for="studentName">Student name :</label>
-                    <input type="text" name="" id="studentName"><br> <br>
+                    <input type="text" name="stdname" id="studentName"><br> <br>
                     <label for="">Gender :</label>
-                    <input type="radio" id="male" value="Male">
+                    <input type="radio" id="male" name="gender" value="Male">
                     <label for="male"> Male</label>
-                    <input type="radio" name="" id="female">
+                    <input type="radio" name="gender" value="female">
                     <label for="female">Female</label><br> <br>
                     <label for="studentId">Student ID:</label>
-                    <input type="text"><br><br>
+                    <input type="number" name="stdID"><br><br>
                     <label for="parentId">Parent ID:</label>
-                    <input type="text">
+                    <input type="number" name="prntID">
 
                 </fieldset>
                 <fieldset id="grades">
@@ -84,20 +84,24 @@
                     </table>
                     <label for="feedBack"> feedback</label>
                     <textarea name="feedback" id="" cols="30" rows="10"></textarea>
-<button type="submit">Add Student</button>                </fieldset>
+                    <button type="submit">Add Student</button>
+                </fieldset>
             </form>
         </section>
         <section>
-            stduent list from ava script 
+            <table id="studentinfo">
+
+            </table>
         </section>
 
     </main>
-    
- <footer>
+
+    <footer>
         <p>All right reserved copyright &copy;2020</p>
         <span>Contact Info</span>
     </footer>
-    <script src="/js/java.js"></script>
+    <!-- <script src="js/java.js"></script> -->
+    <script src="js/java2.js"></script>
 </body>
 
 </html>
