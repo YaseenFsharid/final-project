@@ -1,5 +1,5 @@
 # final-project
-## The name of the project:School Portal.
+## The name of the project: School Portal.
 ## Names of the team members:
 - Ahlam Alefishat.
 - Amal Almomani.
