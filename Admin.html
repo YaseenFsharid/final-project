@@ -47,28 +47,32 @@
     </header>
 
     <main>
+
         <section id="leftNav">
             <h1>Welcome to the admin page.</h1>
             <p>Please fill the form to add new students.</p>
         </section>
 
         <section id="studentFillForm">
-            <form action="">
+          
+       
+            <form id="addStudent">
+
                 <fieldset id="personalInfo">
                     <legend>
                         Personal Info
                     </legend>
                     <label for="studentName">Student name :</label>
-                    <input type="text" name="" id="studentName"><br> <br>
+                    <input type="text" name="stdname" id="studentName"><br> <br>
                     <label for="">Gender :</label>
-                    <input type="radio" id="male" value="Male">
+                    <input type="radio" id="male" name="gender" value="Male">
                     <label for="male"> Male</label>
-                    <input type="radio" name="" id="female">
+                    <input type="radio" name="gender" value="female">
                     <label for="female">Female</label><br> <br>
                     <label for="studentId">Student ID:</label>
-                    <input type="text"><br><br>
+                    <input type="number" name="stdID"><br><br>
                     <label for="parentId">Parent ID:</label>
-                    <input type="text">
+                    <input type="number" name="prntID">
 
                 </fieldset>
                 <fieldset id="grades">
@@ -112,6 +116,7 @@
 
                         </tfoot>
                     </table>
+
                 </fieldset>
 
                 <fieldset id="feedBackField">
@@ -127,15 +132,27 @@
 
             </form>
         </section>
+<section>
+            <table id="studentinfo">
+
+            </table>
+        </section>
+
+                    
+        
 
 
     </main>
 
     <footer>
+
         <p>All rights reserved copyright &copy;2020</p>
         <h5>Contact info</h5>
+
+       
     </footer>
-    <script src="/js/java.js"></script>
+    <!-- <script src="js/java.js"></script> -->
+    <script src="js/java2.js"></script>
 </body>
 
 </html>
