@@ -18,53 +18,63 @@ function Student (studentName,studentId,gender,parentId,mathMark,englishMark ,sc
 
 // this is the array that contains each student that is added by the form
 
-var STDtable =document.getElementById("studentinfo");
-
+var clicks=1;
 var STD=[];
 var adminForm = document.getElementById("addStudent");
- adminForm.addEventListener("submit", addstudent);
- function makingHeader(){
-  var tr=document.createElement('tr');
-  STDtable.appendChild(tr);
-  var th= document.createElement("th");
-  tr.appendChild(th);
-  th.textContent= "studnet Name";
-  var th1= document.createElement("th");
-  tr.appendChild(th1);
-  th1.textContent= "studnet ID";
-  var th2= document.createElement("th");
-  tr.appendChild(th2);
-  th2.textContent= "Gender";
-  var th3= document.createElement("th");
-  tr.appendChild(th3);
-  th3.textContent= "Parent ID";
-  var th4= document.createElement("th");
-  th4.setAttribute("colspan", "3");
-  tr.appendChild(th4);
-  th4.textContent= "Math";
-  var th5= document.createElement("th");
-  th5.setAttribute("colspan", "3");
-
-  tr.appendChild(th5);
-  th5.textContent= "English";
-  var th6= document.createElement("th");
-  th6.setAttribute("colspan", "3");
-
-  tr.appendChild(th6);
-  th6.textContent= "sience ";
-  var th7= document.createElement("th");
-  tr.appendChild(th7);
-  th7.textContent= "Averge";
-  var th8= document.createElement("th");
-  tr.appendChild(th8);
-  th8.textContent= "FeedBack";
 
 
-    }
-    makingHeader();
- function addstudent(event){
- event.preventDefault();
+adminForm.addEventListener("submit", addstudent);
+ 
+  function addstudent(event){
+    event.preventDefault();
 
+    if (clicks ==1)
+    {
+    function makingHeader(){
+      var STDtable =document.getElementById("studentinfo");
+        var tr=document.createElement('tr');
+        STDtable.appendChild(tr);
+        var th= document.createElement("th");
+     tr.appendChild(th);
+     th.textContent= "studnet Name";
+     var th1= document.createElement("th");
+     tr.appendChild(th1);
+     th1.textContent= "studnet ID";
+     var th2= document.createElement("th");
+     tr.appendChild(th2);
+     th2.textContent= "Gender";
+     var th3= document.createElement("th");
+     tr.appendChild(th3);
+     th3.textContent= "Parent ID";
+     var th4= document.createElement("th");
+     th4.setAttribute("colspan", "3");
+     tr.appendChild(th4);
+     th4.textContent= "Math";
+     var th5= document.createElement("th");
+     th5.setAttribute("colspan", "3");
+    
+     tr.appendChild(th5);
+     th5.textContent= "English";
+     var th6= document.createElement("th");
+     th6.setAttribute("colspan", "3");
+    
+     tr.appendChild(th6);
+     th6.textContent= "sience ";
+     var th7= document.createElement("th");
+     tr.appendChild(th7);
+     th7.textContent= "Averge";
+     var th8= document.createElement("th");
+     tr.appendChild(th8);
+     th8.textContent= "FeedBack";
+    
+     }
+     makingHeader();
+     clicks++;}
+          
+      
+
+   
+  
 
  var stdname = event.target.stdname.value;
  console.log(stdname);
@@ -172,8 +182,8 @@ td9.setAttribute("border-collapse"," collapse");
 td9.textContent=feedBack;
 
 
-  
  }
+      
 
 // function creatingChart()
 // {
