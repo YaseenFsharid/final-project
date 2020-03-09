@@ -2,7 +2,8 @@
 
 
 var Students =[];
-function Student (studentName,studentId,gender,parentId,mathMark,englishMark ,scienceMark, feedBack){
+
+function Student (studentName,studentId,gender,parentId,mathMark,englishMark ,scienceMark, feedBack ){
     this.studentName=studentName;
     this.studentId=studentId;
     this.gender=gender;
@@ -11,6 +12,8 @@ function Student (studentName,studentId,gender,parentId,mathMark,englishMark ,sc
     this.englishMark=englishMark;
     this.scienceMark=scienceMark;
     this.feedBack=feedBack;
+    this.femaleTotal=0;
+    this.maleTotal=0;
     //this total will holds the total of each subject
     this.CourseTotal=0;
     Students.push(this);
@@ -20,6 +23,9 @@ function Student (studentName,studentId,gender,parentId,mathMark,englishMark ,sc
 
 var clicks=1;
 var STD=[];
+var male=document.getElementById("male").value;
+console.log(male);
+var female=document.getElementById("female").value;
 var adminForm = document.getElementById("addStudent");
 
 
@@ -87,6 +93,9 @@ adminForm.addEventListener("submit", addstudent);
  var firtstSub=document.getElementById("math");
 console.log(firtstSub);
 //first subject
+
+
+
  var grade1=event.target.firstExam.value;
  console.log("fff",grade1);
  var grade2=event.target.secondExam.value;
@@ -126,8 +135,6 @@ var gradeE1=event.target.FirstExamEnglish.value;
   console.log('rrrrrrr',STD.studentName);
   var STDtable =document.getElementById("studentinfo");
  // this is student table data
-  // for (let student = 0; student < STD.length; student++) {
-   
 var data1=document.createElement("tr");
 STDtable.appendChild(data1);
   var td=document.createElement('td');
@@ -145,7 +152,7 @@ STDtable.appendChild(data1);
   td4.textContent=STD.parentId;
   var total=0;
 
-  //for math
+  //this is the for loop to get each mark in math subject
   for (var i = 0 ; i <mathMark.length ; i++){
   var td5=document.createElement('td');
   data1.appendChild(td5);
@@ -153,6 +160,7 @@ STDtable.appendChild(data1);
   total=total+parseInt( mathMark[i]);
 
 }
+//this is the for loop to get each mark in english subject
   for (var j = 0 ; j <englishMark.length ; j++){
     var td6=document.createElement('td');
     data1.appendChild(td6);
@@ -161,7 +169,7 @@ STDtable.appendChild(data1);
     td6.textContent=STD.englishMark[j];
 
   }
-  //for science 
+  //this is the for loop to get each mark in science subject
   for (var k = 0 ; k <scienceMark.length ; k++){
     var td7=document.createElement('td');
     data1.appendChild(td7);
@@ -183,25 +191,61 @@ td9.textContent=feedBack;
 
 
  }
-      
+ 
+ 
+var statistc = document.getElementById("showStatic");
 
-// function creatingChart()
-// {
-//   var femaleCounter=0;
-//   var maleCounter=0;
-//   console.log(Students.gender,"jkm");
-//   // if(gender=="female")
-//   // {
-//   //   femaleCounter++;}
-//   //   else {}
-//   //   maleCounter++;
-//   // }
-//   var ctx = document.getElementById('genderChart').getContext('2d');
-//   var genderChart = new Chart(ctx, {
-//     type: 'doughnut',
-//     data: [5,4],
-//     backgroundColor: black,
+statistc.addEventListener("click", function (event){
+ 
+event.preventDefault();
+ 
+  for(var i=0; i<STD.length; i++){
+    console.log("hi");
 
-// });
-// creatingChart();
-// }
+if ( male == "male")
+{
+  STD.maleTotal++; 
+ 
+}
+else{ 
+  STD.femaleTotal++;
+  
+}
+
+  }});
+  console.log(STD.maleTotal);
+
+
+
+
+// this the first chart for the gender  and it will shown as Pie
+
+// function render3(){
+//   var ctx = document.getElementById('genderChart');
+
+//   var config = {
+//     type: 'pie',
+//     data: {
+//       datasets: [{
+//         data: [
+        
+//         ],
+//         backgroundColor: [
+//           window.chartColors.red,
+        
+//           window.chartColors.blue,
+//         ],
+//         label: 'Dataset 1'
+//       }],
+//       labels: [
+//         'Female',
+       
+//         'Male'
+//       ]
+//     },
+//     options: {
+//       responsive: true
+//     }
+//   };
+//   } 
+  
