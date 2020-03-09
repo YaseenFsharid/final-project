@@ -194,11 +194,11 @@ function addstudent(event) {
 
   td9.textContent = feedBack;
 
-  // this is to count the number of female students
+  // this is to count the number of female students and mail student
 
   if (gender === 'Male') {
     maleTotal++;
-
+   
   }
   else if (gender === 'Female') {
     femaleTotal++;
@@ -215,9 +215,7 @@ statistics.addEventListener("click", function (event) {
 
   event.preventDefault();
   render3();
-
 });
-
 
 
 
@@ -263,36 +261,92 @@ function render3() {
     }
   });
 
+  var ctx = document.getElementById('gradesChart').getContext('2d');
+  var mathdata =[];
+
+  var scincedata =[];
+
+  var englishdata =[];
+  function Math(mathMark) {
+ for (let index = 0; index < mathMark.length; index++) {
+      mathdata=mathMark[index].value;
+      console.log(mathdata);
+      //  scincedata=scienceMark[index].value;
+       
+      //  englishdata=englishMark[index].value;
+     }
+    }   
+Math(mathMark);
+  // function Science(scienceMark) {
+  //   for (let index2 = 0; index2 < scienceMark.length; index2++) {
+  //     scincedata = scienceMark[index2].value;
+  //     console.log("ghfh");
+  //   }
+  // }
+  // function English(englishMark) {
+  //   for (let index3 = 0; index3 < englishMark.length; index3++) {
+  //     englishdata= englishMark[index3].value;
+  //     console.log("ghfh");
+  //   }
+  // }
+
+var gradesChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: "",
+        datasets: [{
+            label: "Math",
+            data: mathdata,
+            backgroundColor: 
+                'rgba(255, 99, 132, 0.2)',
+                
+            
+            borderColor: 
+                
+                'blue',
+                
+            borderWidth: 1
+        },
+        {
+            label: 'science',
+            data: "20",
+            backgroundColor: 
+                'rgba(255, 99, 230, 0.2)',
+                
+            
+            borderColor: 
+                
+                'red',
+                
+            borderWidth: 1
+        },
+        {
+          label: 'english',
+          data: "515151",
+          backgroundColor: 
+              'rgba(255, 99, 230, 0.2)',
+              
+          
+          borderColor: 
+              
+              'green',
+              
+          borderWidth: 1
+      }
+        ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
 }
 
+//this is the funciton of grades chart 
 
 
-
-// function render3(){
-//   var ctx = document.getElementById('genderChart');
-
-//   var config = {
-//     type: 'pie',
-//     data: {
-//       datasets: [{
-//         data: [
-
-//         ],
-//         backgroundColor: [
-//           window.chartColors.red,
-
-//           window.chartColors.blue,
-//         ],
-//         label: 'Dataset 1'
-//       }],
-//       labels: [
-//         'Female',
-
-//         'Male'
-//       ]
-//     },
-//     options: {
-//       responsive: true
-//     }
-//   };
-//   } 
