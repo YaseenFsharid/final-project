@@ -90,25 +90,29 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr id="math">
                                 <td>Math</td>
-                                <td><input type="number" placeholder="0"></td>
-                                <td><input type="number" placeholder="0"></td>
-                                <td><input type="number" placeholder="0"></td>
+
+                                <td><input type="number" id="firstExam" placeholder="0"></td>
+                                <td><input type="number" id="secondExam" placeholder="0"></td>
+                                <td><input type="number" id="thirdExam" placeholder="0"></td>
+
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>English</td>
-                                <td><input type="number" placeholder="0"></td>
-                                <td><input type="number" placeholder="0"></td>
-                                <td><input type="number" placeholder="0"></td>
+
+                                <td><input type="number" id="FirstExamEnglish" placeholder="0"></td>
+                                <td><input type="number" id="secondExamEnglish" placeholder="0"></td>
+                                <td><input type="number" id="ThirdExamEnglish" placeholder="0"></td>
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>Science</td>
-                                <td><input type="number" placeholder="0"></td>
-                                <td><input type="number" placeholder="0"></td>
-                                <td><input type="number" placeholder="0"></td>
+
+                                <td><input type="number" id="firstExamScience" placeholder="0"></td>
+                                <td><input type="number" id="secondExamScience" placeholder="0"></td>
+                                <td><input type="number" id="ThirdExamScience" placeholder="0"></td>
                                 <td id="totalMark"></td>
                             </tr>
                         </tbody>
@@ -121,8 +125,9 @@
                 </fieldset>
 
                 <fieldset id="feedBackField">
-                  <textarea name="feedback" id="" cols="120" rows="8" placeholder=" Student Feedback"></textarea >
-                    
+
+                    <textarea name="feedback" id="feedback" cols="120" rows="8" placeholder=" Student Feedback"></textarea>
+
                 </fieldset>
                 <br>
                 <fieldset id="submit">
@@ -133,8 +138,16 @@
         </section>
         <section>
             <table id="studentinfo">
+               
 
             </table>
+        </section>
+        <section>
+            <canvas id="genderChart" ></canvas>
+            <canvas id="gradesChart" ></canvas>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         </section>
 
 
