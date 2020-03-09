@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/adminStyle.css">
     <title>Admin</title>
 </head>
@@ -13,8 +13,9 @@
 <body>
     <header>
 
+
         <div id="logo">
-            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/100x70/000000"></a>
+            <img src="img/vector-binoculars-man-6.png">
         </div>
 
         <div id="websiteTitle">
@@ -35,16 +36,15 @@
         </div>
 
         <div id="icons">
-            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/15x15/000000"
-                    alt="facebookIcon"></a>
-            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/15x15/000000"
-                    alt="linkedInIcon"></a>
-            <a href="https://via.placeholder.com"><img src="https://via.placeholder.com/15x15/000000"
-                    alt="instagramIcon"></a>
+            <a href=""><img src="img/2.png" alt="instagramIcon"></a>
+            <a href=""><img src="img/3.png" alt="linkedInIcon"></a>
+            <a href=""><img src="img/5.png" alt="emailIcon"></a>
 
         </div>
 
+       
     </header>
+
 
     <main>
 
@@ -54,25 +54,25 @@
         </section>
 
         <section id="studentFillForm">
-          
-       
+
+
             <form id="addStudent">
 
                 <fieldset id="personalInfo">
                     <legend>
                         Personal Info
                     </legend>
-                    <label for="studentName">Student name :</label>
-                    <input type="text" name="stdname" id="studentName"><br> <br>
-                    <label for="">Gender :</label>
+                    <!-- <label for="studentName">Student name :</label> -->
+                    <input type="text" name="stdname" id="studentName" placeholder="Student name"><br> <br>
+                    <!-- <label for="">Gender :</label> -->
                     <input type="radio" id="male" name="gender" value="Male">
                     <label for="male"> Male</label>
                     <input type="radio" name="gender" value="female">
                     <label for="female">Female</label><br> <br>
-                    <label for="studentId">Student ID:</label>
-                    <input type="number" name="stdID"><br><br>
-                    <label for="parentId">Parent ID:</label>
-                    <input type="number" name="prntID">
+                    <!-- <label for="studentId">Student ID:</label> -->
+                    <input type="number" name="stdID" placeholder="Student ID"><br><br>
+                    <!-- <label for="parentId">Parent ID:</label> -->
+                    <input type="number" name="prntID" placeholder="Parent ID">
 
                 </fieldset>
                 <fieldset id="grades">
@@ -86,29 +86,33 @@
                                 <th>First exam</th>
                                 <th>Seconed exam</th>
                                 <th>Final exam</th>
-                                <th>Total</th>
+                                <!-- <th>Total</th> -->
                             </tr>
                         </thead>
                         <tbody>
                             <tr id="math">
                                 <td>Math</td>
-                                <td><input type="number" id="firstExam"></td>
-                                <td><input type="number" id="secondExam"></td>
-                                <td><input type="number" id="thirdExam"></td>
+
+                                <td><input type="number" id="firstExam" placeholder="0"></td>
+                                <td><input type="number" id="secondExam" placeholder="0"></td>
+                                <td><input type="number" id="thirdExam" placeholder="0"></td>
+
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>English</td>
-                                <td><input type="number" id="FirstExamEnglish"></td>
-                                <td><input type="number" id="secondExamEnglish"></td>
-                                <td><input type="number" id="ThirdExamEnglish"></td>
+
+                                <td><input type="number" id="FirstExamEnglish" placeholder="0"></td>
+                                <td><input type="number" id="secondExamEnglish" placeholder="0"></td>
+                                <td><input type="number" id="ThirdExamEnglish" placeholder="0"></td>
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>Science</td>
-                                <td><input type="number" id="firstExamScience"></td>
-                                <td><input type="number" id="secondExamScience"></td>
-                                <td><input type="number" id="ThirdExamScience"></td>
+
+                                <td><input type="number" id="firstExamScience" placeholder="0"></td>
+                                <td><input type="number" id="secondExamScience" placeholder="0"></td>
+                                <td><input type="number" id="ThirdExamScience" placeholder="0"></td>
                                 <td id="totalMark"></td>
                             </tr>
                         </tbody>
@@ -116,23 +120,23 @@
 
                         </tfoot>
                     </table>
+                    
 
                 </fieldset>
 
                 <fieldset id="feedBackField">
-                    <legend>
-                        Feedback
-                    </legend>
-                    <textarea name="feedback" id="feedback" cols="70" rows="5"></textarea>
+
+                    <textarea name="feedback" id="feedback" cols="120" rows="8" placeholder=" Student Feedback"></textarea>
+
                 </fieldset>
                 <br>
                 <fieldset id="submit">
-                    <button type="submit">Add Student</button>
+                    <button type="submit" id="addStudentButton">Add Student</button>
                 </fieldset>
 
             </form>
         </section>
-<section>
+        <section>
             <table id="studentinfo">
                
 
@@ -146,8 +150,8 @@
             <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         </section>
 
-                    
-        
+
+
 
 
     </main>
@@ -155,9 +159,8 @@
     <footer>
 
         <p>All rights reserved copyright &copy;2020</p>
-        <h5>Contact info</h5>
 
-       
+
     </footer>
     <!-- <script src="js/java.js"></script> -->
     <script src="js/java2.js"></script>

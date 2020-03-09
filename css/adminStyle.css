@@ -1,81 +1,209 @@
+input[type='text'] {
+        padding:5px;
+        margin-bottom:20px;
+        border-radius:5px;
+        border:none;
+        outline:none;
+        font-size:13px;
+        font-family: 'News Cycle', sans-serif;
+
+}
+
+input[type='number'] {
+    padding:5px;
+    margin-bottom:20px;
+    border-radius:5px;
+    border:none;
+    outline:none;
+    font-size:13px;
+    font-family: 'News Cycle', sans-serif;
+
+}
+
+
 #leftNav {
-    background-color: black;
+    margin-top: 85px ;
+    background-color:#400d16;
     width: 25%;
     height: 600px;
     float: left;
-}
-
-#studentFillForm {
-float: right;
-width: 75%;
-height: 600px;
-background-color: rgb(18, 61, 129);
 
 }
+
 
 #leftNav h1 {
     font-weight: bolder;
     color: beige;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 40px;
-    padding-top: 260px;
+    padding-top: 220px;
     text-align: center;
+    font-family: 'News Cycle', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+
+
 }
+
 
 
 #leftNav p {
-    font-weight: bolder;
+    font-weight: lighter;
     color: beige;
     padding-top: 30px;
     text-align: center;
+    font-family: 'News Cycle', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+    padding: 50px;
+
 
 }
 
+
+#studentFillForm {
+    margin-top: 85px ;
+    float: right;
+    width: 75%;
+    height: 600px;
+    background: url(/img/footer_lodyas.png);
+    -webkit-animation:100s scroll infinite linear;
+    -moz-animation:100s scroll infinite linear;
+    -o-animation:100s scroll infinite linear;
+    -ms-animation:100s scroll infinite linear;
+    animation:100s scroll infinite linear;
+   
+    font-family: 'News Cycle', sans-serif;
+    
+
+    
+}
+
+
+
+@-webkit-keyframes scroll{
+    100%{
+      background-position:0px -3000px;
+    }
+  }
+  
+  @-moz-keyframes scroll{
+    100%{
+      background-position:0px -3000px;
+    }
+  }
+  
+  @-o-keyframes scroll{
+    100%{
+      background-position:0px -3000px;
+    }
+  }
+  
+  @-ms-keyframes scroll{
+    100%{
+      background-position:0px -3000px;
+    }
+  }
+  
+  @keyframes scroll{
+    100%{
+      background-position:0px -3000px;
+    }
+  }
 
 
 #studentFillForm form {
-    margin-top: 20px;
-    padding: 100px;
-
+    padding: 50px;
+    text-align: center;
 }
+
+button[type="submit"]{
+    background:#145e97;
+    color:#FFF;
+    padding:15px;
+    font-weight:700;
+    opacity:0.8;
+    width: 42%;
+}
+
+button[type="submit"]:hover{
+    cursor:pointer;
+      opacity:1;
+}
+
+#addStudentButton {
+    /* width:100%; */
+    padding:10px;
+    margin-bottom:20px;
+    border-radius:5px;
+    border:none;
+    outline:none;
+    margin-right: 25px;
+    font-size:13px;
+}
+
+
 
 
 
 
 
 #personalInfo {
-    border: black solid 2px;
-    padding-top: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
+    border: #f5f5f5 solid 1px;
+    border-radius: 5px;
+   
+    padding: 20px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.459) 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
     height: 200px;
     margin-right: 30px;
-    margin-bottom: 30px;
+  
+   
 
     float: left;
 }
 
 #grades {
-    border: black solid 2px;
-    padding: 30px;
+    border: #f5f5f5 solid 1px;
+    border-radius: 5px;
+   
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.459) 2px 2px;
-    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
+    height: 240px;
 
 }
 
 
 #feedBackField {
-    border: black solid 2px;
-    padding: 30px;
+    border: #f5f5f5 solid 1px;
+    border-radius: 5px;
+   
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.459) 2px 2px;
-    float: left;
+    /* float: left; */
+    margin-top: 40px;
 
     
 }
+
+textarea {
+
+    padding:5px;
+    margin-bottom:10px;
+    margin-top: 10px;
+    border-radius:5px;
+    border:none;
+    outline:none;
+    font-size:13px;
+    font-family: 'News Cycle', sans-serif;
+    
+
+}
+
 
 legend {
     text-align: left;
@@ -92,29 +220,13 @@ table {
 }
 
 table td {
-    border: black solid 1px;
     padding: 5px;
 }
 
 table th {
-    border: black solid 1px;
     font-weight: bolder;
     padding: 10px;
 
 }
 
-#submit {
-    padding-top: 70px;
-    padding-left: 90px;
-}
-
-
-#submit button {
-    width: 100px;
-    height: 50px;
-    font-size: 15px;
-    font-weight: bolder;
-    background-color: black;
-    color: beige;
-}
 
