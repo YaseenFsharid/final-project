@@ -134,7 +134,7 @@ function addstudent(event) {
 
 
 
-  
+
   STD = new Student(stdname, gender, studentId, parentId, mathMark, englishMark, scienceMark, feedBack);
   //this is the table 
   console.log('rrrrrrr', STD.studentName);
@@ -195,26 +195,26 @@ function addstudent(event) {
   td9.textContent = feedBack;
 
   // this is to count the number of female students
-  
+
   if (gender === 'Male') {
     maleTotal++;
-    
+
   }
-  else if (gender === 'Female'){
+  else if (gender === 'Female') {
     femaleTotal++;
-    
+
   }
   console.log(femaleTotal, maleTotal);
-  
-  }
-  
 
-var statistc = document.getElementById("showStatic");
+}
 
-statistc.addEventListener("click", function (event) {
+
+var statistics = document.getElementById("showstatistics");
+
+statistics.addEventListener("click", function (event) {
 
   event.preventDefault();
-  console.log(male, female);
+  render3();
 
 });
 
@@ -223,6 +223,50 @@ statistc.addEventListener("click", function (event) {
 
 
 // this the first chart for the gender  and it will shown as Pie
+
+function render3() {
+
+  var ctx = document.getElementById('genderChart').getContext('2d');
+  var gendertChart1 = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      datasets: [{
+        data: [
+          femaleTotal,
+          maleTotal,
+        ],
+        backgroundColor: [
+          '#400d16',
+          'lightgray'
+        ],
+        label: 'Dataset 1'
+      }],
+      labels: [
+        'female',
+        'male'
+      ]
+    },
+
+    options: {
+      responsive: true,
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Doughnut Chart'
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      }
+    }
+  });
+
+}
+
+
+
 
 // function render3(){
 //   var ctx = document.getElementById('genderChart');
