@@ -65,7 +65,7 @@ function getStudent() {
   var studentString = localStorage.getItem("studentinfo");
   if (studentString) {
     Student.all = JSON.parse(studentString);
-    makingHeader();
+    // makingHeader();
 
     ///---------------------------------------------------------------------------------------
     for (var b=0; b<Student.all.length; b++){
