@@ -2,10 +2,13 @@
 var total = 0;
 var femaleTotal = 0;
 var maleTotal = 0;
-var mathTotal=0;
-var scienceTotal=0;
-var englishTotal=0;
-function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, avg, feedBack ,mathTotal,scienceTotal,englishTotal) {
+var mathTotal = 0;
+var scienceTotal = 0;
+var englishTotal = 0;
+var avg=0;
+
+
+function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack, mathTotal, scienceTotal, englishTotal, avg) {
   this.studentName = studentName;
   this.studentId = studentId;
   this.gender = gender;
@@ -13,18 +16,18 @@ function Student(studentName, studentId, gender, parentId, mathMark, englishMark
   this.mathMark = mathMark;
   this.englishMark = englishMark;
   this.scienceMark = scienceMark;
-  this.avg=avg;
   this.feedBack = feedBack;
-  this.mathTotal=mathTotal;
-  this.scienceTotal=scienceTotal;
-  this.englishTotal=englishTotal;
+  this.mathTotal = mathTotal;
+  this.scienceTotal = scienceTotal;
+  this.englishTotal = englishTotal;
+  this.avg = avg;
   //this total will holds the total of each subject
   this.CourseTotal = 0;
   Student.all.push(this);
 }
 // this is the array that contains each student that is added by the form
 Student.all = [];
-var STD =[];
+var STD = [];
 var clicks = 0;
 // var STD = [];
 // global variables
@@ -60,99 +63,73 @@ function getStudent() {
     Student.all = JSON.parse(studentString);
     makingHeader();
     ///---------------------------------------------------------------------------------------
-    for (var b=0; b<Student.all.length; b++){
+    for (var b = 0; b < Student.all.length; b++) {
       var STDtable = document.getElementById("studentinfo");
       // this is student table data
-        var data1 = document.createElement("tr");
-        STDtable.appendChild(data1);
-        var td = document.createElement('td');
-        data1.appendChild(td);
-        td.textContent = Student.all[b].studentName;
-        var td2 = document.createElement('td');
-        data1.appendChild(td2);
-        td2.textContent = Student.all[b].studentId;
-        var td3 = document.createElement('td');
-        data1.appendChild(td3);
-        td3.textContent = Student.all[b].gender;
-        var td4 = document.createElement('td');
-        data1.appendChild(td4);
-        td4.textContent = Student.all[b].parentId;
-        var td4 = document.createElement('td');
-        data1.appendChild(td4);
-        
+      var data1 = document.createElement("tr");
+      STDtable.appendChild(data1);
+      var td = document.createElement('td');
+      data1.appendChild(td);
+      td.textContent = Student.all[b].studentName;
+      var td2 = document.createElement('td');
+      data1.appendChild(td2);
+      td2.textContent = Student.all[b].studentId;
+      var td3 = document.createElement('td');
+      data1.appendChild(td3);
+      td3.textContent = Student.all[b].gender;
+      var td4 = document.createElement('td');
+      data1.appendChild(td4);
+      td4.textContent = Student.all[b].parentId;
+      var td4 = document.createElement('td');
+      data1.appendChild(td4);
 
-        for (var i=0; i<3; i++){
+
+      for (var i = 0; i < 3; i++) {
 
         var td5 = document.createElement('td');
         data1.appendChild(td5);
         td5.textContent = Student.all[b].mathMark[i];
         total = total + parseInt(mathMark[i]);
-          mathTotal+=parseInt(Student.all[b].mathMark[i])
-      
+        mathTotal += parseInt(Student.all[b].mathMark[i])
+
       }
 
-         for (var i=0; i<3; i++){
+      for (var i = 0; i < 3; i++) {
         var td7 = document.createElement('td');
         data1.appendChild(td7);
         td7.textContent = Student.all[b].englishMark[i];
-            total = total + parseInt(englishMark[i]);
-          englishTotal+=parseInt(Student.all[b].englishMark[i]);
-        
-         }
+        total = total + parseInt(englishMark[i]);
+        englishTotal += parseInt(Student.all[b].englishMark[i]);
 
-        for (var i=0; i<3; i++){
+      }
+
+      for (var i = 0; i < 3; i++) {
         var td6 = document.createElement('td');
         data1.appendChild(td6);
         td6.textContent = Student.all[b].scienceMark[i]
-      total = total + parseInt(scienceMark[i]);
-          scienceTotal+=parseInt(Student.all[b].scienceMark[i]);
+        total = total + parseInt(scienceMark[i]);
+        scienceTotal += parseInt(Student.all[b].scienceMark[i]);
       }
-        Student.all.avg=total/3;
-        var td8 = document.createElement("td");
-        data1.appendChild(td8);
-        td8.textContent = avg;
+
+      var td8 = document.createElement("td");
+      td8.textContent = Student.all[b].avg;
+      data1.appendChild(td8);
+      console.log(Student.all[b].avg);
+      
+
+      var td9 = document.createElement("td");
+      data1.appendChild(td9);
+      td9.setAttribute("border-collapse", " collapse");
+      td9.textContent = Student.all[b].feedBack;
 
 
- var td9 = document.createElement("td");
-        data1.appendChild(td9);
-        td9.setAttribute("border-collapse", " collapse");
-        td9.textContent = feedBack;}
-        
-        // //this is the for loop to get each mark in math subject
-        // for (var j = 0; j < mathMark.length; j++) {
-        //   var td5 = document.createElement('td');
-        //   data1.appendChild(td5);
-        //   td5.textContent = Student.all[b].mathMark[j];
-        //   total = total + parseInt(mathMark[j]);
-        //   mathTotal+=parseInt(Student.all[b].mathMark[j]); 
-        // }
-        // //this is the for loop to get each mark in english subject
-        // for (var d = 0; d < englishMark.length; d++) {
-        //   var td6 = document.createElement('td');
-        //   data1.appendChild(td6);
-          
-        //   td6.textContent = Student.all[b].englishMark[d];
-        //    total = total + parseInt(englishMark[d]);
-        //   englishTotal+=parseInt(Student.all[b].englishMark[d]);  
-          
-        // }
-        // //this is the for loop to get each mark in science subject
-        // for (var k = 0; k < scienceMark.length; k++) {
-        //   var td7 = document.createElement('td');
-        //   data1.appendChild(td7);
-        //   total = total + parseInt(scienceMark[k]);
-        //   td7.textContent = Student.all[b].scienceMark[k];
-        //   scienceTotal+=parseInt(Student.all[b].scienceMark[k]);
-        // }
 
-        
+    }
 
-        // STDtable.deleteRow(-1);
+    // STDtable.deleteRow(-1);
 
-       
-    
-     
-//-----------------------------------------------------------------------------------------  
+
+    //-----------------------------------------------------------------------------------------  
   }
 }
 // add event listner when clicking on submit 
@@ -178,6 +155,8 @@ function addstudent(event) {
     grade3 = event.target.thirdExam.value;
     mathMark = [];
     mathMark.push(grade1, grade2, grade3);
+    mathTotal = parseInt(grade1) + parseInt(grade2) + parseInt(grade3);
+
     console.log(mathMark);
     //second subjiect
     gradeE1 = event.target.FirstExamEnglish.value;
@@ -185,6 +164,8 @@ function addstudent(event) {
     gradeE3 = event.target.ThirdExamEnglish.value;
     englishMark = [];
     englishMark.push(gradeE1, gradeE2, gradeE3);
+    englishTotal = parseInt(gradeE1) + parseInt(gradeE2) + parseInt(gradeE3);
+
     feedBack = event.target.feedback.value;
     //third subject
     gradeS1 = event.target.firstExamScience.value;
@@ -192,10 +173,11 @@ function addstudent(event) {
     gradeS3 = event.target.ThirdExamScience.value;
     scienceMark = [];
     scienceMark.push(gradeS1, gradeS2, gradeS3);
-    avg=total / 3;
+    scienceTotal = parseInt(gradeS1) + parseInt(gradeS2) + parseInt(gradeS3);
+    avg = ((mathTotal + englishTotal + scienceTotal)/3);
     // avg.push(avg);
   }
-  STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark,avg, feedBack,mathTotal,scienceTotal,englishTotal);
+  STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack, mathTotal, scienceTotal, englishTotal, avg);
   console.log(Student.all, STD);
   renderTable();
   updateStudent();
@@ -243,54 +225,64 @@ function renderTable() {
   // this is the table
   var STDtable = document.getElementById("studentinfo");
   // this is student table data
-    var data1 = document.createElement("tr");
-    STDtable.appendChild(data1);
-    var td = document.createElement('td');
-    data1.appendChild(td);
-    td.textContent = STD.studentName;
-    console.log(STD.studentName);
-    var td2 = document.createElement('td');
-    data1.appendChild(td2);
-    td2.textContent = STD.studentId;
-    var td3 = document.createElement('td');
-    data1.appendChild(td3);
-    td3.textContent = STD.gender;
-    var td4 = document.createElement('td');
-    data1.appendChild(td4);
-    td4.textContent = STD.parentId;
-    var total = 0;
-    //this is the for loop to get each mark in math subject
-    for (var j = 0; j < mathMark.length; j++) {
-      var td5 = document.createElement('td');
-      data1.appendChild(td5);
-      td5.textContent = STD.mathMark[j];
-      mathTotal+=parseInt(STD.mathMark[j]);
-      total = total + parseInt(mathMark[j]);
-    }
-    //this is the for loop to get each mark in english subject
-    for (var d = 0; d < englishMark.length; d++) {
-      var td6 = document.createElement('td');
-      data1.appendChild(td6);
-      total = total + parseInt(englishMark[d]);
-      td6.textContent = STD.englishMark[d];
-    }
-    //this is the for loop to get each mark in science subject
-    for (var k = 0; k < scienceMark.length; k++) {
-      var td7 = document.createElement('td');
-      data1.appendChild(td7);
-      td7.textContent = STD.scienceMark[k];
-      total = total + parseInt(scienceMark[k]);
-    }
-    console.log(total, "total");
-    var td8 = document.createElement("td");
-    data1.appendChild(td8);
-    var avg=total / 3;
-    td8.textContent = avg;
-    // STDtable.deleteRow(-1);
-    var td9 = document.createElement("td");
-    data1.appendChild(td9);
-    td9.setAttribute("border-collapse", " collapse");
-    td9.textContent = feedBack;
+  var data1 = document.createElement("tr");
+  STDtable.appendChild(data1);
+  var td = document.createElement('td');
+  data1.appendChild(td);
+  td.textContent = STD.studentName;
+  console.log(STD.studentName);
+  var td2 = document.createElement('td');
+  data1.appendChild(td2);
+  td2.textContent = STD.studentId;
+  var td3 = document.createElement('td');
+  data1.appendChild(td3);
+  td3.textContent = STD.gender;
+  var td4 = document.createElement('td');
+  data1.appendChild(td4);
+  td4.textContent = STD.parentId;
+  var total = 0;
+  //this is the for loop to get each mark in math subject
+  for (var j = 0; j < mathMark.length; j++) {
+    var td5 = document.createElement('td');
+    data1.appendChild(td5);
+    td5.textContent = STD.mathMark[j];
+    mathTotal += parseInt(STD.mathMark[j]);
+    total = total + parseInt(mathMark[j]);
+  }
+  mathTotal = parseInt(grade1) + parseInt(grade2) + parseInt(grade3);
+
+
+  //this is the for loop to get each mark in english subject
+  for (var d = 0; d < englishMark.length; d++) {
+    var td6 = document.createElement('td');
+    data1.appendChild(td6);
+    total = total + parseInt(englishMark[d]);
+    td6.textContent = STD.englishMark[d];
+  }
+  englishTotal = parseInt(gradeE1) + parseInt(gradeE2) + parseInt(gradeE3);
+
+
+  //this is the for loop to get each mark in science subject
+  for (var k = 0; k < scienceMark.length; k++) {
+    var td7 = document.createElement('td');
+    data1.appendChild(td7);
+    td7.textContent = STD.scienceMark[k];
+    total = total + parseInt(scienceMark[k]);
+  }
+  scienceTotal = parseInt(gradeS1) + parseInt(gradeS2) + parseInt(gradeS3);
+
+
+
+  console.log(total, "total", avg);
+  var td8 = document.createElement("td");
+  data1.appendChild(td8);
+  avg = ((mathTotal + englishTotal + scienceTotal)/3);
+  td8.textContent = avg;
+  // STDtable.deleteRow(-1);
+  var td9 = document.createElement("td");
+  data1.appendChild(td9);
+  td9.setAttribute("border-collapse", " collapse");
+  td9.textContent = feedBack;
   addStudent.reset();
   // this is to count the number of female students
   if (gender === 'Male') {
@@ -348,60 +340,61 @@ function renderChart() {
   var gradesChart = new Chart(ctx2, {
     type: 'line',
     data: {
-        labels: "",
-        labels: "Math,Science,English",
-        datasets: [{
-            label: "Math",
-            label: ["Math Marks"],
-            data: STD.mathMark,
-            backgroundColor: 
-                'rgba(255, 99, 132, 0.2)',
-  
-            
-            borderColor: 
-                
-                'blue',
-                
-            borderWidth: 1
-        },
-        {
-            label: 'science',
-            data: STD.scienceMark,
-            backgroundColor: 
-                'rgba(255, 99, 230, 0.2)',
-  
-            
-            borderColor: 
-                
-                'red',
-                
-            borderWidth: 1
-        },
-        {
-          label: 'english',
-          data: STD.englishMark,
-          backgroundColor: 
-              'rgba(255, 99, 230, 0.2)',
-  
-          
-          borderColor: 
-              
-              'green',
-              
-          borderWidth: 1
+      labels: "",
+      labels: "Math,Science,English",
+      datasets: [{
+        label: "Math",
+        label: ["Math Marks"],
+        data: STD.mathMark,
+        backgroundColor:
+          'rgba(255, 99, 132, 0.2)',
+
+
+        borderColor:
+
+          'blue',
+
+        borderWidth: 1
+      },
+      {
+        label: 'science',
+        data: STD.scienceMark,
+        backgroundColor:
+          'rgba(255, 99, 230, 0.2)',
+
+
+        borderColor:
+
+          'red',
+
+        borderWidth: 1
+      },
+      {
+        label: 'english',
+        data: STD.englishMark,
+        backgroundColor:
+          'rgba(255, 99, 230, 0.2)',
+
+
+        borderColor:
+
+          'green',
+
+        borderWidth: 1
       }
-        ]
+      ]
     },
     options: {
-        scales: {
-            yAxes: [{display:true,
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
+      scales: {
+        yAxes: [{
+          display: true,
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
     }
   });
-  
-  
+
+
 }
