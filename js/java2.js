@@ -1,7 +1,13 @@
 'use strict';
 var femaleTotal = 0;
 var maleTotal = 0;
-function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack) {
+
+var mathTotal=0;
+var scienceTotal=0;
+var englishTotal=0;
+
+
+function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack ,mathTotal,scienceTotal,englishTotal) {
   this.studentName = studentName;
   this.studentId = studentId;
   this.gender = gender;
@@ -10,6 +16,9 @@ function Student(studentName, studentId, gender, parentId, mathMark, englishMark
   this.englishMark = englishMark;
   this.scienceMark = scienceMark;
   this.feedBack = feedBack;
+  this.mathTotal=mathTotal;
+  this.scienceTotal=scienceTotal;
+  this.englishTotal=englishTotal;
   //this total will holds the total of each subject
   this.CourseTotal = 0;
   Student.all.push(this);
@@ -91,6 +100,7 @@ function getStudent() {
           data1.appendChild(td6);
           total = total + parseInt(englishMark[d]);
           td6.textContent = Student.all[b].englishMark[d];
+          englishTotal+=parseInt(STD.englishMark[d]);   
         }
         //this is the for loop to get each mark in science subject
         for (var k = 0; k < scienceMark.length; k++) {
@@ -98,6 +108,7 @@ function getStudent() {
           data1.appendChild(td7);
           total = total + parseInt(scienceMark[k]);
           td7.textContent = Student.all[b].scienceMark[k];
+          scienceTotal+=parseInt(STD.scienceMark[k]);
         }
         console.log(total, "total");
         var td8 = document.createElement("td");
@@ -167,7 +178,7 @@ function addstudent(event) {
     scienceMark.push(gradeS1, gradeS2, gradeS3);
   }
 
-  STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack);
+  STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack,mathTotal,scienceTotal,englishTotal);
   console.log(Student.all, STD);
 
   renderTable();
@@ -247,6 +258,7 @@ function renderTable() {
       var td5 = document.createElement('td');
       data1.appendChild(td5);
       td5.textContent = STD.mathMark[j];
+      mathTotal+=parseInt(STD.mathMark[j]);
       total = total + parseInt(mathMark[j]);
     }
     //this is the for loop to get each mark in english subject
@@ -331,5 +343,68 @@ function renderChart() {
       }
     }
   });
+
+  var ctx2 = document.getElementById('gradesChart').getContext('2d');
+
+  var gradesChart = new Chart(ctx2, {
+
+    type: 'line',
+    data: {
+        labels: "",
+        labels: "Math,Science,English",
+        datasets: [{
+            label: "Math",
+            label: ["Math Marks"],
+            data: STD.mathMark,
+            backgroundColor: 
+                'rgba(255, 99, 132, 0.2)',
+  
+            
+            borderColor: 
+                
+                'blue',
+                
+            borderWidth: 1
+        },
+        {
+            label: 'science',
+            data: STD.scienceMark,
+            backgroundColor: 
+                'rgba(255, 99, 230, 0.2)',
+  
+            
+            borderColor: 
+                
+                'red',
+                
+            borderWidth: 1
+        },
+        {
+          label: 'english',
+          data: STD.englishMark,
+          backgroundColor: 
+              'rgba(255, 99, 230, 0.2)',
+  
+          
+          borderColor: 
+              
+              'green',
+              
+          borderWidth: 1
+      }
+        ]
+    },
+    options: {
+        scales: {
+            yAxes: [{display:true,
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+  });
+  
+  
 
 }
