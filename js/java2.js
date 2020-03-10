@@ -2,12 +2,9 @@
 
 var femaleTotal = 0;
 var maleTotal = 0;
-var mathTotal=0;
-var scienceTotal=0;
-var englishTotal=0;
 var Students = [];
 
-function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack ,mathTotal,scienceTotal,englishTotal) {
+function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack) {
   this.studentName = studentName;
   this.studentId = studentId;
   this.gender = gender;
@@ -16,9 +13,6 @@ function Student(studentName, studentId, gender, parentId, mathMark, englishMark
   this.englishMark = englishMark;
   this.scienceMark = scienceMark;
   this.feedBack = feedBack;
-  this.mathTotal=mathTotal;
-  this.scienceTotal=scienceTotal;
-  this.englishTotal=englishTotal;
   //this total will holds the total of each subject
   this.CourseTotal = 0;
   Students.push(this);
@@ -140,9 +134,8 @@ function addstudent(event) {
 
 
 
-  STD = new Student(stdname, gender, studentId, parentId, mathMark, englishMark, scienceMark, feedBack,mathTotal,scienceTotal,englishTotal);
 
-  
+  STD = new Student(stdname, gender, studentId, parentId, mathMark, englishMark, scienceMark, feedBack);
   //this is the table 
   console.log('rrrrrrr', STD.studentName);
   var STDtable = document.getElementById("studentinfo");
@@ -169,19 +162,17 @@ function addstudent(event) {
     var td5 = document.createElement('td');
     data1.appendChild(td5);
     td5.textContent = STD.mathMark[i];
-    mathTotal+=parseInt(STD.mathMark[i]);
     total = total + parseInt(mathMark[i]);
 
   }
-  
   //this is the for loop to get each mark in english subject
   for (var j = 0; j < englishMark.length; j++) {
     var td6 = document.createElement('td');
     data1.appendChild(td6);
     total = total + parseInt(englishMark[j]);
- 
+
     td6.textContent = STD.englishMark[j];
-    englishTotal+=parseInt(STD.englishMark[j]);   
+
   }
   //this is the for loop to get each mark in science subject
   for (var k = 0; k < scienceMark.length; k++) {
@@ -189,7 +180,6 @@ function addstudent(event) {
     data1.appendChild(td7);
     td7.textContent = STD.scienceMark[k];
     total = total + parseInt(scienceMark[k]);
-    scienceTotal+=parseInt(STD.scienceMark[k]);
   }
   console.log(total, "total");
 
@@ -215,6 +205,7 @@ function addstudent(event) {
 
   }
   console.log(femaleTotal, maleTotal);
+
 }
 
 
@@ -225,7 +216,6 @@ statistics.addEventListener("click", function (event) {
   event.preventDefault();
   render3();
 });
-
 
 
 
@@ -272,31 +262,41 @@ function render3() {
   });
 
   var ctx = document.getElementById('gradesChart').getContext('2d');
-//   var mathdata =[];
+  var mathdata =[];
 
-//   var scincedata =[];
+  var scincedata =[];
 
-//   var englishdata =[];
-//   function Math(mathMark) {
-//  for (let index = 0; index < mathMark.length; index++) {
-//       mathdata=mathMark[index].value;
-//       console.log(mathdata);
-//       //  scincedata=scienceMark[index].value;
+  var englishdata =[];
+  function Math(mathMark) {
+ for (let index = 0; index < mathMark.length; index++) {
+      mathdata=mathMark[index].value;
+      console.log(mathdata);
+      //  scincedata=scienceMark[index].value;
        
-//       //  englishdata=englishMark[index].value;
-//      }
-//     }   
-// Math(mathMark);
-  
-console.log('151515151515',scienceTotal);
-var gradesChart = new Chart(ctx, {
+      //  englishdata=englishMark[index].value;
+     }
+    }   
+Math(mathMark);
+  // function Science(scienceMark) {
+  //   for (let index2 = 0; index2 < scienceMark.length; index2++) {
+  //     scincedata = scienceMark[index2].value;
+  //     console.log("ghfh");
+  //   }
+  // }
+  // function English(englishMark) {
+  //   for (let index3 = 0; index3 < englishMark.length; index3++) {
+  //     englishdata= englishMark[index3].value;
+  //     console.log("ghfh");
+  //   }
+  // }
 
-    type: 'line',
+var gradesChart = new Chart(ctx, {
+    type: 'bar',
     data: {
-        labels: "Math,Science,English",
+        labels: "",
         datasets: [{
-            label: ["Math Marks"],
-            data: STD.mathMark,
+            label: "Math",
+            data: mathdata,
             backgroundColor: 
                 'rgba(255, 99, 132, 0.2)',
                 
@@ -309,7 +309,7 @@ var gradesChart = new Chart(ctx, {
         },
         {
             label: 'science',
-            data: STD.scienceMark,
+            data: "20",
             backgroundColor: 
                 'rgba(255, 99, 230, 0.2)',
                 
@@ -322,7 +322,7 @@ var gradesChart = new Chart(ctx, {
         },
         {
           label: 'english',
-          data: STD.englishMark,
+          data: "515151",
           backgroundColor: 
               'rgba(255, 99, 230, 0.2)',
               
@@ -337,7 +337,7 @@ var gradesChart = new Chart(ctx, {
     },
     options: {
         scales: {
-            yAxes: [{display:true,
+            yAxes: [{
                 ticks: {
                     beginAtZero: true
                 }
@@ -347,7 +347,6 @@ var gradesChart = new Chart(ctx, {
 });
 }
 
-	
 //this is the funciton of grades chart 
 
 
