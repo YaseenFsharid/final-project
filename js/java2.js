@@ -1,10 +1,11 @@
 'use strict';
+var total = 0;
 var femaleTotal = 0;
 var maleTotal = 0;
 var mathTotal=0;
 var scienceTotal=0;
 var englishTotal=0;
-function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack ,mathTotal,scienceTotal,englishTotal) {
+function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, avg, feedBack ,mathTotal,scienceTotal,englishTotal) {
   this.studentName = studentName;
   this.studentId = studentId;
   this.gender = gender;
@@ -12,6 +13,7 @@ function Student(studentName, studentId, gender, parentId, mathMark, englishMark
   this.mathMark = mathMark;
   this.englishMark = englishMark;
   this.scienceMark = scienceMark;
+  this.avg=avg;
   this.feedBack = feedBack;
   this.mathTotal=mathTotal;
   this.scienceTotal=scienceTotal;
@@ -66,7 +68,6 @@ function getStudent() {
         var td = document.createElement('td');
         data1.appendChild(td);
         td.textContent = Student.all[b].studentName;
-        console.log(STD.studentName);
         var td2 = document.createElement('td');
         data1.appendChild(td2);
         td2.textContent = Student.all[b].studentId;
@@ -76,40 +77,80 @@ function getStudent() {
         var td4 = document.createElement('td');
         data1.appendChild(td4);
         td4.textContent = Student.all[b].parentId;
-        var total = 0;
-        //this is the for loop to get each mark in math subject
-        for (var j = 0; j < mathMark.length; j++) {
-          var td5 = document.createElement('td');
-          data1.appendChild(td5);
-          td5.textContent = Student.all[b].mathMark[j];
-          total = total + parseInt(mathMark[j]);
-        }
-        //this is the for loop to get each mark in english subject
-        for (var d = 0; d < englishMark.length; d++) {
-          var td6 = document.createElement('td');
-          data1.appendChild(td6);
-          total = total + parseInt(englishMark[d]);
-          td6.textContent = Student.all[b].englishMark[d];
-          englishTotal+=parseInt(STD.englishMark[d]);   
-        }
-        //this is the for loop to get each mark in science subject
-        for (var k = 0; k < scienceMark.length; k++) {
-          var td7 = document.createElement('td');
-          data1.appendChild(td7);
-          total = total + parseInt(scienceMark[k]);
-          td7.textContent = Student.all[b].scienceMark[k];
-          scienceTotal+=parseInt(STD.scienceMark[k]);
-        }
-        console.log(total, "total");
+        var td4 = document.createElement('td');
+        data1.appendChild(td4);
+        
+
+        for (var i=0; i<3; i++){
+
+        var td5 = document.createElement('td');
+        data1.appendChild(td5);
+        td5.textContent = Student.all[b].mathMark[i];
+        total = total + parseInt(mathMark[i]);
+          mathTotal+=parseInt(Student.all[b].mathMark[i])
+      
+      }
+
+         for (var i=0; i<3; i++){
+        var td7 = document.createElement('td');
+        data1.appendChild(td7);
+        td7.textContent = Student.all[b].englishMark[i];
+            total = total + parseInt(englishMark[i]);
+          englishTotal+=parseInt(Student.all[b].englishMark[i]);
+        
+         }
+
+        for (var i=0; i<3; i++){
+        var td6 = document.createElement('td');
+        data1.appendChild(td6);
+        td6.textContent = Student.all[b].scienceMark[i]
+      total = total + parseInt(scienceMark[i]);
+          scienceTotal+=parseInt(Student.all[b].scienceMark[i]);
+      }
+        Student.all.avg=total/3;
         var td8 = document.createElement("td");
         data1.appendChild(td8);
-        td8.textContent = total / 3;
-        // STDtable.deleteRow(-1);
-        var td9 = document.createElement("td");
+        td8.textContent = avg;
+
+
+ var td9 = document.createElement("td");
         data1.appendChild(td9);
         td9.setAttribute("border-collapse", " collapse");
-        td9.textContent = feedBack;
-    }
+        td9.textContent = feedBack;}
+        
+        // //this is the for loop to get each mark in math subject
+        // for (var j = 0; j < mathMark.length; j++) {
+        //   var td5 = document.createElement('td');
+        //   data1.appendChild(td5);
+        //   td5.textContent = Student.all[b].mathMark[j];
+        //   total = total + parseInt(mathMark[j]);
+        //   mathTotal+=parseInt(Student.all[b].mathMark[j]); 
+        // }
+        // //this is the for loop to get each mark in english subject
+        // for (var d = 0; d < englishMark.length; d++) {
+        //   var td6 = document.createElement('td');
+        //   data1.appendChild(td6);
+          
+        //   td6.textContent = Student.all[b].englishMark[d];
+        //    total = total + parseInt(englishMark[d]);
+        //   englishTotal+=parseInt(Student.all[b].englishMark[d]);  
+          
+        // }
+        // //this is the for loop to get each mark in science subject
+        // for (var k = 0; k < scienceMark.length; k++) {
+        //   var td7 = document.createElement('td');
+        //   data1.appendChild(td7);
+        //   total = total + parseInt(scienceMark[k]);
+        //   td7.textContent = Student.all[b].scienceMark[k];
+        //   scienceTotal+=parseInt(Student.all[b].scienceMark[k]);
+        // }
+
+        
+
+        // STDtable.deleteRow(-1);
+
+       
+    
      
 //-----------------------------------------------------------------------------------------  
   }
@@ -151,8 +192,10 @@ function addstudent(event) {
     gradeS3 = event.target.ThirdExamScience.value;
     scienceMark = [];
     scienceMark.push(gradeS1, gradeS2, gradeS3);
+    avg=total / 3;
+    // avg.push(avg);
   }
-  STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack,mathTotal,scienceTotal,englishTotal);
+  STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark,avg, feedBack,mathTotal,scienceTotal,englishTotal);
   console.log(Student.all, STD);
   renderTable();
   updateStudent();
@@ -241,7 +284,8 @@ function renderTable() {
     console.log(total, "total");
     var td8 = document.createElement("td");
     data1.appendChild(td8);
-    td8.textContent = total / 3;
+    var avg=total / 3;
+    td8.textContent = avg;
     // STDtable.deleteRow(-1);
     var td9 = document.createElement("td");
     data1.appendChild(td9);
