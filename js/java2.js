@@ -1,12 +1,9 @@
 'use strict';
 var femaleTotal = 0;
 var maleTotal = 0;
-
 var mathTotal=0;
 var scienceTotal=0;
 var englishTotal=0;
-
-
 function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack ,mathTotal,scienceTotal,englishTotal) {
   this.studentName = studentName;
   this.studentId = studentId;
@@ -23,14 +20,11 @@ function Student(studentName, studentId, gender, parentId, mathMark, englishMark
   this.CourseTotal = 0;
   Student.all.push(this);
 }
-
 // this is the array that contains each student that is added by the form
 Student.all = [];
 var STD =[];
-
 var clicks = 0;
 // var STD = [];
-
 // global variables
 var stdname = 0;
 var studentId = 0;
@@ -52,21 +46,17 @@ var gradeS1 = 0;
 var gradeS2 = 0;
 var gradeS3 = 0;
 var scienceMark = [];
-
-
 // this function sent the students to the local storage
 function updateStudent() {
   var studentString = JSON.stringify(Student.all);
   localStorage.setItem("studentinfo", studentString);
 }
-
 // this function get the students from the local storage
 function getStudent() {
   var studentString = localStorage.getItem("studentinfo");
   if (studentString) {
     Student.all = JSON.parse(studentString);
-    // makingHeader();
-
+    makingHeader();
     ///---------------------------------------------------------------------------------------
     for (var b=0; b<Student.all.length; b++){
       var STDtable = document.getElementById("studentinfo");
@@ -119,34 +109,21 @@ function getStudent() {
         data1.appendChild(td9);
         td9.setAttribute("border-collapse", " collapse");
         td9.textContent = feedBack;
-
     }
      
 //-----------------------------------------------------------------------------------------  
-
-
-
-
   }
 }
-
-
 // add event listner when clicking on submit 
 var adminForm = document.getElementById("addStudent");
 adminForm.addEventListener("submit", addstudent);
-
-
 // this event fuction increase the clicks and call the header function and then get and store the values from the form 
 function addstudent(event) {
-
   event.preventDefault();
-
   clicks++
-
   if (clicks == 1) {
     makingHeader();
   }
-
   if (clicks >= 1) {
     stdname = event.target.stdname.value;
     console.log(stdname);
@@ -159,7 +136,6 @@ function addstudent(event) {
     grade2 = event.target.secondExam.value;
     grade3 = event.target.thirdExam.value;
     mathMark = [];
-
     mathMark.push(grade1, grade2, grade3);
     console.log(mathMark);
     //second subjiect
@@ -167,7 +143,6 @@ function addstudent(event) {
     gradeE2 = event.target.secondExamEnglish.value;
     gradeE3 = event.target.ThirdExamEnglish.value;
     englishMark = [];
-
     englishMark.push(gradeE1, gradeE2, gradeE3);
     feedBack = event.target.feedback.value;
     //third subject
@@ -177,20 +152,11 @@ function addstudent(event) {
     scienceMark = [];
     scienceMark.push(gradeS1, gradeS2, gradeS3);
   }
-
   STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack,mathTotal,scienceTotal,englishTotal);
   console.log(Student.all, STD);
-
   renderTable();
   updateStudent();
-
-
 }
-
-
-
-
-
 // this fuction creates header 
 function makingHeader() {
   var STDtable = document.getElementById("studentinfo");
@@ -228,12 +194,9 @@ function makingHeader() {
   tr.appendChild(th8);
   th8.textContent = "FeedBack";
 }
-
 // this fuction creates the table
 function renderTable() {
-
   // addstudent();
-
   // this is the table
   var STDtable = document.getElementById("studentinfo");
   // this is student table data
@@ -284,8 +247,6 @@ function renderTable() {
     data1.appendChild(td9);
     td9.setAttribute("border-collapse", " collapse");
     td9.textContent = feedBack;
-
-
   addStudent.reset();
   // this is to count the number of female students
   if (gender === 'Male') {
@@ -296,16 +257,12 @@ function renderTable() {
   }
 }
 getStudent();
-
 // getting the chart section to show statistics
 var statistics = document.getElementById("showstatistics");
 statistics.addEventListener("click", function (event) {
   event.preventDefault();
   renderChart();
 });
-
-
-
 // this the first chart for the gender  and it will shown as Pie
 function renderChart() {
   var ctx = document.getElementById('genderChart').getContext('2d');
@@ -343,11 +300,8 @@ function renderChart() {
       }
     }
   });
-
   var ctx2 = document.getElementById('gradesChart').getContext('2d');
-
   var gradesChart = new Chart(ctx2, {
-
     type: 'line',
     data: {
         labels: "",
@@ -406,5 +360,4 @@ function renderChart() {
   });
   
   
-
 }
