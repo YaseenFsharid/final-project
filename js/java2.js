@@ -256,7 +256,12 @@ function renderTable() {
     femaleTotal++;
   }
 }
+
+
 getStudent();
+
+
+
 // getting the chart section to show statistics
 var statistics = document.getElementById("showstatistics");
 statistics.addEventListener("click", function (event) {

@@ -160,4 +160,8 @@ button[type="submit"]:hover{
       opacity:1;
 }
 
+#tableInfo th,td{
+  border: 1px solid black;
+  padding-top: 50px;
+}
 
