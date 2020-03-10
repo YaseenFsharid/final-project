@@ -128,7 +128,7 @@ header {
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
 
 #leftNavMain {
-    background-color: #145e97;
+    background-color: #1b5683;
     width: 25%;
     height: 600px;
     float: left;
@@ -137,7 +137,7 @@ header {
 
 #leftNavMain h1 {
     font-weight: bolder;
-    color: beige;
+    color: #f5f5f5;
     font-weight: bold;
     font-size: 40px;
     padding-top: 220px;
@@ -154,7 +154,7 @@ header {
 
 #leftNavMain p {
     font-weight: lighter;
-    color: beige;
+    color: #f5f5f5
     padding-top: 30px;
     text-align: center;
     font-family: 'News Cycle', sans-serif;
