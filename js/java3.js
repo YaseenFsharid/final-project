@@ -2,8 +2,9 @@
     if (student1String) {
       var sT = JSON.parse(student1String);
     }
-    console.log(sT);
-
+    console.log(sT[0].studentName);
+   console.log( typeof(sT));
+   
 // the submit event handler for the status table 
 var Form = document.getElementById("parentForm");
 var p=document.getElementById("parent");
@@ -12,16 +13,19 @@ function getVaildation()
 {
     event.preventDefault()
     for (var k=0; k< sT.length ; k++){
+
     if (p.value  ==sT[k].parentId)
     {
         console.log("true");
-        console.log(sT.mathMark.length);   
-       
+
+          makingHeader();
+          renderTable();
+        
     }
     }
 }
-makingHeader();
-renderTable();
+
+
 function makingHeader() {
     var STDtable = document.getElementById("tableInfo");
     var tr = document.createElement('tr');
@@ -51,12 +55,15 @@ function makingHeader() {
     th6.setAttribute("colspan", "3");
     tr.appendChild(th6);
     th6.textContent = "Science ";
-    var th7 = document.createElement("th");
-    tr.appendChild(th7);
-    th7.textContent = "Averge";
+    // var th7 = document.createElement("th");
+    // tr.appendChild(th7);
+    // th7.textContent = "Averge";
     var th8 = document.createElement("th");
     tr.appendChild(th8);
     th8.textContent = "FeedBack";
+    // STDtable.remove();
+        //   STDtable.remove();
+
   }
 
 
@@ -82,27 +89,30 @@ function makingHeader() {
       td4.textContent = sT.parentId;
       var total = 0;
       //this is the for loop to get each mark in math subject
+      for (let stu = 0;stu< sT.length; stu++) {
+          
+          
       
-      for (var j = 0; j < sT.mathMark.length; j++) {
+      for (var j = 0; j < sT[stu].mathMark.length; j++) {
         var td5 = document.createElement('td');
         data1.appendChild(td5);
-        td5.textContent = sT.mathMark[j];
-        mathTotal+=parseInt(sT.mathMark[j]);
-        total = total + parseInt(sT.mathMark[j]);
+        td5.textContent = sT[stu].mathMark[j];
+        // mathTotal+=parseInt(sT[0].mathMark[j]);
+        // total = total + parseInt(sT[0].mathMark[j]);
       }
       //this is the for loop to get each mark in english subject
-      for (var d = 0; d < sT.englishMark.length; d++) {
+      for (var d = 0; d < sT[stu].englishMark.length; d++) {
         var td6 = document.createElement('td');
         data1.appendChild(td6);
-        total = total + parseInt(sT.englishMark[d]);
-        td6.textContent =sT.englishMark[d];
+        // total = total + parseInt(sT.englishMark[d]);
+        td6.textContent =sT[stu].englishMark[d];
       }
       //this is the for loop to get each mark in science subject
-      for (var k = 0; k < sT.scienceMark.length; k++) {
+      for (var k = 0; k < sT[stu].scienceMark.length; k++) {
         var td7 = document.createElement('td');
         data1.appendChild(td7);
-        td7.textContent = sT.scienceMark[k];
-        total = total + parseInt(sT.scienceMark[k]);
+        td7.textContent = sT[stu].scienceMark[k];
+        // total = total + parseInt(sT.scienceMark[k]);
       }
       console.log(total, "total");
       var td8 = document.createElement("td");
@@ -113,8 +123,8 @@ function makingHeader() {
       data1.appendChild(td9);
       td9.setAttribute("border-collapse", " collapse");
       td9.textContent = sT.feedBack;
-    addStudent.reset();
     // this is to count the number of female students
-   
+
   }
-  
+
+}
