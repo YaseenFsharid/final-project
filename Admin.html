@@ -64,7 +64,7 @@
                     </legend>   
 
                     <!-- <label for="studentName">Student name :</label> -->
-                    <input type="text" name="stdname" id="studentName" placeholder="Student name"><br> <br>
+                    <input type="text" name="stdname" id="studentName" placeholder="Student name" required><br> <br>
                     <!-- <label for="">Gender :</label> -->
                     
                     <input type="radio" id="maleRadio" name="gender" value="Male">
@@ -72,9 +72,9 @@
                     <input type="radio" id="femaleRadio" name="gender" value="Female">
                     <label for="femaleRadio">Female</label><br> <br>
                     <!-- <label for="studentId">Student ID:</label> -->
-                    <input type="number" name="stdID" placeholder="Student ID"><br><br>
+                    <input type="number" name="stdID" placeholder="Student ID" required min="1000000" max="99999999"><br><br>
                     <!-- <label for="parentId">Parent ID:</label> -->
-                    <input type="number" name="prntID" placeholder="Parent ID">
+                    <input type="number" name="prntID" placeholder="Parent ID" required min="1000" max="9999">
 
                 </fieldset>
                 <fieldset id="grades">
@@ -95,26 +95,26 @@
                             <tr id="math">
                                 <td>Math</td>
 
-                                <td><input type="number" id="firstExam" placeholder="0"></td>
-                                <td><input type="number" id="secondExam" placeholder="0"></td>
-                                <td><input type="number" id="thirdExam" placeholder="0"></td>
+                                <td><input type="number" id="firstExam" placeholder="0" required min="0" max="25"></td>
+                                <td><input type="number" id="secondExam" placeholder="0" required  min="0" max="25"></td>
+                                <td><input type="number" id="thirdExam" placeholder="0" required  min="0" max="50"></td>
 
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>English</td>
 
-                                <td><input type="number" id="FirstExamEnglish" placeholder="0"></td>
-                                <td><input type="number" id="secondExamEnglish" placeholder="0"></td>
-                                <td><input type="number" id="ThirdExamEnglish" placeholder="0"></td>
+                                <td><input type="number" id="FirstExamEnglish" placeholder="0" required min="0" max="25"></td>
+                                <td><input type="number" id="secondExamEnglish" placeholder="0" required min="0" max="25"></td>
+                                <td><input type="number" id="ThirdExamEnglish" placeholder="0" required min="0" max="50"></td>
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>Science</td>
 
-                                <td><input type="number" id="firstExamScience" placeholder="0"></td>
-                                <td><input type="number" id="secondExamScience" placeholder="0"></td>
-                                <td><input type="number" id="ThirdExamScience" placeholder="0"></td>
+                                <td><input type="number" id="firstExamScience" placeholder="0" required  min="0" max="25"></td>
+                                <td><input type="number" id="secondExamScience" placeholder="0" required  min="0" max="25"></td>
+                                <td><input type="number" id="ThirdExamScience" placeholder="0" required  min="0" max="50"></td>
                                 <td id="totalMark"></td>
                             </tr>
                         </tbody>
@@ -129,7 +129,7 @@
                 <fieldset id="feedBackField">
                     <legend>Feedback</legend>
 
-                    <textarea name="feedback" id="feedback" cols="120" rows="8" placeholder=" Student Feedback"></textarea>
+                    <textarea name="feedback" id="feedback" cols="120" rows="8" placeholder=" Student Feedback" required></textarea>
 
                 </fieldset>
                 <br>
@@ -156,7 +156,7 @@
         </section>
         <section>
             <canvas id="genderChart" ></canvas>
-            <canvas id="gradesChart" ></canvas>
+            
             <button id="addDataset">Add Dataset</button>
 
 

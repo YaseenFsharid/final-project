@@ -20,71 +20,151 @@ function getVaildation() {
   event.preventDefault()
   for (var k = 0; k < sT.length; k++) {
     if (p.value == sT[k].parentId) {
-      clicks=1;
+      clicks++;
+      createHeader();
+
+      
+      if (clicks > 1) {
+        console.log("clicks", clicks);
+form.removeEventListener("submit", getVaildation);
+console.log(form.removeEventListener("submit", getVaildation));
+
+      }
       console.log("true");
-      if (clicks == 1) {
-        createHeader();
+
+
+      var STDtable = document.getElementById("tableInfo");
+      // this is student table data
+      var data1 = document.createElement("tr");
+      STDtable.appendChild(data1);
+      var td = document.createElement('td');
+      data1.appendChild(td);
+      td.textContent = sT[k].studentName;
+      var td2 = document.createElement('td');
+      data1.appendChild(td2);
+      td2.textContent = sT[k].studentId;
+      var td3 = document.createElement('td');
+      data1.appendChild(td3);
+      td3.textContent = sT[k].gender;
+      var td4 = document.createElement('td');
+      data1.appendChild(td4);
+      td4.textContent = sT[k].parentId;
+      var total = 0;
+      //this is the for loop to get each mark in math subject
+
+      for (var j = 0; j < sT[k].mathMark.length; j++) {
+        var td5 = document.createElement('td');
+        data1.appendChild(td5);
+        td5.textContent = sT[k].mathMark[j];
+        // mathTotal += parseInt(sT[k].mathMark[j]);
+        // total = total + parseInt(sT[k].mathMark[j]);
+      }
+      //this is the for loop to get each mark in english subject
+      for (var d = 0; d < sT[k].englishMark.length; d++) {
+        var td6 = document.createElement('td');
+        data1.appendChild(td6);
+        // total = total + parseInt(sT[k].englishMark[d]);
+        td6.textContent = sT[k].englishMark[d];
+      }
+      //this is the for loop to get each mark in science subject
+      for (var n = 0; n < sT[k].scienceMark.length; n++) {
+        var td7 = document.createElement('td');
+        data1.appendChild(td7);
+        td7.textContent = sT[k].scienceMark[n];
+        // total = total + parseInt(sT[k].scienceMark[k]);
+      }
+      // console.log(total, "total");
+      var td8 = document.createElement("td");
+      td8.textContent = sT[k].avg;
+      data1.appendChild(td8);
+      console.log(sT[k].avg);
+      // STDtable.deleteRow(-1);
+      var td9 = document.createElement("td");
+      data1.appendChild(td9);
+      td9.setAttribute("border-collapse", " collapse");
+      td9.textContent = sT[k].feedBack;
+      //this is the chart of the grades of each student 
+
+
+
+
+      AddChart();
+      function AddChart() {
+        console.log('yaseenasac', sT[k].mathMark);
+        var ctx2 = document.getElementById('gradesChart').getContext('2d');
+        var gradesChart = new Chart(ctx2, {
+          type: 'line',
+          data: {
+            labels: "",
+            labels: "Math,Science,English",
+            datasets: [{
+              label: "Math",
+              label: ["Math Marks"],
+              data: sT[k].mathMark,
+              backgroundColor:
+                'rgba(255, 99, 132, 0.2)',
+
+
+              borderColor:
+
+                'blue',
+
+              borderWidth: 1
+            },
+            {
+              label: 'science',
+              data: sT[k].scienceMark,
+              backgroundColor:
+                'rgba(255, 99, 230, 0.2)',
+
+
+              borderColor:
+
+                'red',
+
+              borderWidth: 1
+            },
+            {
+              label: 'english',
+              data: sT[k].englishMark,
+              backgroundColor:
+                'rgba(255, 99, 230, 0.2)',
+
+
+              borderColor:
+
+                'green',
+
+              borderWidth: 1
+            }
+            ]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                display: true,
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
+          }
+        });
+
+
       }
 
-    var STDtable = document.getElementById("tableInfo");
-    // this is student table data
-    var data1 = document.createElement("tr");
-    STDtable.appendChild(data1);
-    var td = document.createElement('td');
-    data1.appendChild(td);
-    td.textContent = sT[k].studentName;
-    var td2 = document.createElement('td');
-    data1.appendChild(td2);
-    td2.textContent = sT[k].studentId;
-    var td3 = document.createElement('td');
-    data1.appendChild(td3);
-    td3.textContent = sT[k].gender;
-    var td4 = document.createElement('td');
-    data1.appendChild(td4);
-    td4.textContent = sT[k].parentId;
-    var total = 0;
-    //this is the for loop to get each mark in math subject
-
-    for (var j = 0; j < sT[k].mathMark.length; j++) {
-      var td5 = document.createElement('td');
-      data1.appendChild(td5);
-      td5.textContent = sT[k].mathMark[j];
-      // mathTotal += parseInt(sT[k].mathMark[j]);
-      // total = total + parseInt(sT[k].mathMark[j]);
     }
-    //this is the for loop to get each mark in english subject
-    for (var d = 0; d < sT[k].englishMark.length; d++) {
-      var td6 = document.createElement('td');
-      data1.appendChild(td6);
-      // total = total + parseInt(sT[k].englishMark[d]);
-      td6.textContent = sT[k].englishMark[d];
-    }
-    //this is the for loop to get each mark in science subject
-    for (var n = 0; n < sT[k].scienceMark.length; n++) {
-      var td7 = document.createElement('td');
-      data1.appendChild(td7);
-      td7.textContent = sT[k].scienceMark[n];
-      // total = total + parseInt(sT[k].scienceMark[k]);
-    }
-    // console.log(total, "total");
-    var td8 = document.createElement("td");
-    td8.textContent = sT[k].avg;
-    data1.appendChild(td8);
-    console.log(sT[k].avg);
-    // STDtable.deleteRow(-1);
-    var td9 = document.createElement("td");
-    data1.appendChild(td9);
-    td9.setAttribute("border-collapse", " collapse");
-    td9.textContent = sT[k].feedBack;
-
 
   }
-}
+
+
 }
 
 // makingHeader();
 
 // renderTable();
+
 
 function createHeader() {
   var STDtable = document.getElementById("tableInfo");
