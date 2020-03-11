@@ -23,11 +23,11 @@ function getVaildation() {
       clicks++;
       createHeader();
 
-      
+
       if (clicks > 1) {
         console.log("clicks", clicks);
-form.removeEventListener("submit", getVaildation);
-console.log(form.removeEventListener("submit", getVaildation));
+        form.removeEventListener("submit", getVaildation);
+        console.log(form.removeEventListener("submit", getVaildation));
 
       }
       console.log("true");
@@ -72,6 +72,7 @@ console.log(form.removeEventListener("submit", getVaildation));
         data1.appendChild(td7);
         td7.textContent = sT[k].scienceMark[n];
         // total = total + parseInt(sT[k].scienceMark[k]);
+        
       }
       // console.log(total, "total");
       var td8 = document.createElement("td");
@@ -84,8 +85,9 @@ console.log(form.removeEventListener("submit", getVaildation));
       td9.setAttribute("border-collapse", " collapse");
       td9.textContent = sT[k].feedBack;
       //this is the chart of the grades of each student 
-
-
+      
+      
+      // STDtable.reset();
 
 
       AddChart();
@@ -102,12 +104,12 @@ console.log(form.removeEventListener("submit", getVaildation));
               label: ["Math Marks"],
               data: sT[k].mathMark,
               backgroundColor:
-                'rgba(255, 99, 132, 0.2)',
+                'rgba(57,116,162,0.2)',
 
 
               borderColor:
 
-                'blue',
+                'rgb(57,116,162)',
 
               borderWidth: 1
             },
@@ -115,12 +117,12 @@ console.log(form.removeEventListener("submit", getVaildation));
               label: 'science',
               data: sT[k].scienceMark,
               backgroundColor:
-                'rgba(255, 99, 230, 0.2)',
+                'rgba(174,174,174,0.2)',
 
 
               borderColor:
 
-                'red',
+                'gray',
 
               borderWidth: 1
             },
@@ -128,12 +130,12 @@ console.log(form.removeEventListener("submit", getVaildation));
               label: 'english',
               data: sT[k].englishMark,
               backgroundColor:
-                'rgba(255, 99, 230, 0.2)',
+                'rgba(64,13,22,0.2)',
 
 
               borderColor:
 
-                'green',
+                '#400d16',
 
               borderWidth: 1
             }
