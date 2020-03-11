@@ -5,7 +5,7 @@ input[type='text'] {
     border:none;
     outline:none;
     font-size:13px;
-    font-family: 'News Cycle', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     width: 40%;
 
 }
@@ -17,29 +17,32 @@ border-radius:5px;
 border:none;
 outline:none;
 font-size:13px;
-font-family: 'News Cycle', sans-serif;
+font-family: 'Rajdhani', sans-serif;
 
 }
 
 
 #leftNavParent {
-margin-top: 85px ;
+margin-top: 60px ;
 background-color:#400d16;
 width: 25%;
 height: 600px;
 float: left;
+box-shadow: 0px 4px 3px rgba(255, 255, 255, 0.054),
+0px 8px 13px rgba(255, 255, 255, 0.054),
+0px 18px 15px rgba(255, 255, 255, 0.1);
 
 }
 
 
 #leftNavParent h1 {
 font-weight: bolder;
-color: beige;
+color: white;
 font-weight: bold;
 font-size: 40px;
 padding-top: 220px;
 text-align: center;
-font-family: 'News Cycle', sans-serif;
+font-family: 'Rajdhani', sans-serif;
 margin-left: 10px;
 margin-right: 10px;
 text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
@@ -53,10 +56,10 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 
 #leftNavParent p {
 font-weight: lighter;
-color: beige;
+color: white;
 padding-top: 30px;
 text-align: center;
-font-family: 'News Cycle', sans-serif;
+font-family: 'Rajdhani', sans-serif;
 text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 0px 8px 13px rgba(0,0,0,0.1),
 0px 18px 23px rgba(0,0,0,0.1);
@@ -67,7 +70,7 @@ padding: 50px;
 
 
 #parentFillForm {
-margin-top: 85px ;
+margin-top: 60px ;
 float: right;
 width: 75%;
 height: 600px;
@@ -78,7 +81,10 @@ background: url(/img/footer_lodyas.png);
 -ms-animation:100s scroll infinite linear;
 animation:100s scroll infinite linear;
 
-font-family: 'News Cycle', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+box-shadow: 0px 4px 3px rgba(255, 255, 255, 0.054),
+0px 8px 13px rgba(255, 255, 255, 0.054),
+0px 18px 15px rgba(255, 255, 255, 0.1);
 
 }
 
@@ -159,9 +165,47 @@ button[type="submit"]:hover{
     cursor:pointer;
       opacity:1;
 }
+/* ------------------------------------------------- */
 
-#tableInfo th,td{
-  border: 1px solid black;
-  padding-top: 50px;
+
+#tableAreaParent{
+  background-color: rgb(22, 22, 22);
+  padding-top: 720px;
+
 }
 
+#tableInfo {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#gradesChart {
+  margin: 0px auto;
+  width: 50%;
+}
+
+#chartAreaParent{
+  background-color: rgb(22, 22, 22);
+  width: 100%;
+}
+
+#tableInfo td, th {
+  border-bottom: white solid 1px;
+  font-size: 20px;
+  padding: 10px;
+  color: #f5f5f5;
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+
+}
+#tableInfo th{
+  color: #f5f5f5;
+  font-size: 25px;
+  text-shadow: 0px 4px 3px #400d164f,
+  0px 8px 13px #400d164f,
+  0px 18px 23px #400d164f;
+  font-family: 'Rajdhani', sans-serif;
+
+  
+}
