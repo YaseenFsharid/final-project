@@ -78,6 +78,7 @@ input[type='number'] {
     animation:100s scroll infinite linear;
    
     font-family: 'News Cycle', sans-serif;
+    margin-bottom: 50px;
     
 
     
@@ -120,25 +121,12 @@ input[type='number'] {
     padding: 50px;
     text-align: center;
 }
+#submitField{
+  margin-top: 15px;
+ 
 
-button[type="submit"]{
-
-    width: 20%;
-
-    padding:10px;
-
-
-    border-radius:5px;
-    border:none;
-    outline:none;
-
-    font-size:13px;
-    font-weight:700;
-
-    background:#145e97;
-    color:#FFF;
-    opacity:0.8;
 }
+
 
 button[type="submit"]:hover{
     cursor:pointer;
@@ -189,7 +177,6 @@ button[type="submit"]:hover{
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
     height: 240px;
-
 }
 
 #grades legend {
@@ -270,5 +257,63 @@ table th {
 
 
 }
+#results{
+  
+  border: #f5f5f5 solid 1px;
+    border-radius: 5px;
+   
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
+    
+    width: 200px;
+    margin-left: 400px;
+    margin-top: 5000px;
+  }
+    
 
 
+
+
+button[type="button"]{
+float: right;
+  width: 150px;
+
+  padding:10px ;
+  margin-right: 90px;
+
+  border-radius:5px;
+  border:none;
+  outline:none;
+
+  font-size:13px;
+  font-weight:700;
+
+  background:#145e97;
+  color:#FFF;
+  opacity:0.8;
+}
+
+button[type="button"]:hover{
+  cursor:pointer;
+    opacity:1;
+}
+
+
+button[type="submit"]{
+  float: left;
+    width: 150px;
+margin-left: 90px;
+    padding:10px;
+
+
+    border-radius:5px;
+    border:none;
+    outline:none;
+
+    font-size:13px;
+    font-weight:700;
+
+    background:#145e97;
+    color:#FFF;
+    opacity:0.8;
+}
