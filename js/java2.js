@@ -7,6 +7,7 @@ var scienceTotal = 0;
 var englishTotal = 0;
 var avg=0;
 
+var studentString;
 
 function Student(studentName, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack, mathTotal, scienceTotal, englishTotal, avg) {
   this.studentName = studentName;
@@ -53,7 +54,7 @@ var gradeS3 = 0;
 var scienceMark = [];
 // this function sent the students to the local storage
 function updateStudent() {
-  var studentString = JSON.stringify(Student.all);
+  studentString = JSON.stringify(Student.all);
   localStorage.setItem("studentinfo", studentString);
 }
 // this function get the students from the local storage
@@ -139,9 +140,11 @@ adminForm.addEventListener("submit", addstudent);
 function addstudent(event) {
   event.preventDefault();
   clicks++
-  if (clicks == 1) {
+
+  if (clicks == 1 && studentString == "") {
     makingHeader();
   }
+
   if (clicks >= 1) {
     stdname = event.target.stdname.value;
     console.log(stdname);
