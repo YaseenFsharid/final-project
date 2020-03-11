@@ -138,7 +138,7 @@ adminForm.addEventListener("submit", addstudent);
 function addstudent(event) {
   event.preventDefault();
   clicks++
-  if (clicks == 1) {
+  if (clicks == 1 && studentString=="") {
     makingHeader();
   }
   if (clicks >= 1) {
