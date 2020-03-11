@@ -22,7 +22,7 @@ input[type='number'] {
 
 
 #leftNav {
-    margin-top: 85px ;
+    margin-top: 62px ;
     background-color:#400d16;
     width: 25%;
     height: 600px;
@@ -32,14 +32,15 @@ input[type='number'] {
 
 #leftNav h1 {
     font-weight: bolder;
-    color: beige;
+    color: #f5f5f5;
     font-weight: bold;
     font-size: 40px;
     padding-top: 220px;
     text-align: center;
-    font-family: 'News Cycle', sans-serif;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* font-family: 'News Cycle', sans-serif; */
+    font-family: 'Sen', sans-serif;
+    margin-left: 8px;
+    margin-right: 8px;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
@@ -51,10 +52,10 @@ input[type='number'] {
 
 #leftNav p {
     font-weight: lighter;
-    color: beige;
-    padding-top: 30px;
+    color: #f5f5f5;
+    /* padding-top: 20px; */
     text-align: center;
-    font-family: 'News Cycle', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
@@ -65,7 +66,7 @@ input[type='number'] {
 
 
 #studentFillForm {
-    margin-top: 85px ;
+    margin-top: 62px ;
     float: right;
     width: 75%;
     height: 600px;
