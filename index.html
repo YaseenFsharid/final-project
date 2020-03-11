@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Portal</title>
+    <!-- googleFont -->
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
 
     <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
@@ -20,51 +26,65 @@
 </head>
 
 
-<body >
+<body>
     <header>
-
-
         <div id="logo">
-            <img src="img/vector-binoculars-man-6.png">
+            <img src="img/logo.png">
         </div>
-
         <div id="websiteTitle">
             <h1>Elite School</h1>
             <p>School portal</p>
         </div>
-
         </div>
-
         <div id="navOptions">
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About us</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
                 </ul>
             </nav>
-
         </div>
-
         <div id="icons">
-            <a href=""><img src="img/2.png" alt="instagramIcon"></a>
-            <a href=""><img src="img/3.png" alt="linkedInIcon"></a>
-            <a href=""><img src="img/5.png" alt="emailIcon"></a>
-
+            <a href=""><img src="img/insta.png" alt="instagramIcon"></a>
+            <a href=""><img src="img/linked.png" alt="linkedInIcon"></a>
+            <a href=""><img src="img/email.png" alt="emailIcon"></a>
         </div>
 
-       
     </header>
 
-
     <main>
+        <!-- ----------------------------------------------------------------------------- -->
+        <div class="container">
 
 
-        <div id="welcoming">
-            <section>
-                    <h1>Welcome to our school portal</h1>
-                    <p>Success comes with hard work.</p>
-            </section>
+            <div class="image">
+                <img class="mySlides w3-animate-left" src="img/2.jpg" width="1262px" height="610px">
+
+                <img class="mySlides w3-animate-left" src="img/1.jpg" width="1262px" height="610px">
+
+                <img class="mySlides w3-animate-left" src="img/26.jpg" width="1263px" height="610px">
+
+                <img class="mySlides w3-animate-left" src="img/10.jpg" width="1262px" height="610px">
+
+                <img class="mySlides w3-animate-left" src="img/21.jpg" width="1262px" height="610px">
+
+
+            </div>
+            <div class="overlay" id="welcoming">
+
+                <h1 class="text">Welcome to our school portal</h1>
+                <p class="text">Success comes with hard work.</p>
+
+            </div>
+
         </div>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- <div id="welcoming">
+            <section >
+                <h1 >Welcome to our school portal</h1>
+                <p >Success comes with hard work.</p>
+            </section>
+        </div> -->
 
         <section id="leftNavMain">
             <h1>Welcome to the main login page.</h1>
@@ -72,15 +92,16 @@
         </section>
 
         <section id="loginSection">
-           <form id="login">
+            <form id="login">
                 <fieldset>
                     <h2>Login</h2>
                     <img src="" alt="">
                     <input type="text" id="USERNAME" placeholder="Username" required><br> <br>
-                    <input input type="password" id="PASSWORD" placeholder="Password" required><br> <br>&nbsp; &nbsp; &nbsp;
+                    <input input type="password" id="PASSWORD" placeholder="Password" required><br> <br>&nbsp; &nbsp;
+                    &nbsp;
                     <input type="submit" name="Log In" value="Log in" id="LogIn"><br> <br>
                     <a href=""> Forgot password?</a>
-                    
+
                 </fieldset>
             </form>
         </section>
@@ -92,7 +113,24 @@
 
     <footer>
         <p>All rights reserved copyright &copy;2020</p>
-   </footer>
+    </footer>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
     <script src="js/java.js"></script>
 </body>
 

@@ -59,9 +59,9 @@ function updateStudent() {
 // this function get the students from the local storage
 function getStudent() {
   var studentString = localStorage.getItem("studentinfo");
-  if (studentString) {
+  if (studentString ) {
     Student.all = JSON.parse(studentString);
-    makingHeader();
+      makingHeader();
     ///---------------------------------------------------------------------------------------
     for (var b = 0; b < Student.all.length; b++) {
       var STDtable = document.getElementById("studentinfo");
@@ -80,8 +80,7 @@ function getStudent() {
       var td4 = document.createElement('td');
       data1.appendChild(td4);
       td4.textContent = Student.all[b].parentId;
-      var td4 = document.createElement('td');
-      data1.appendChild(td4);
+      
 
 
       for (var i = 0; i < 3; i++) {

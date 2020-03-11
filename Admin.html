@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- googleFont -->
+     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/adminStyle.css">
@@ -12,39 +20,29 @@
 
 <body>
     <header>
-
-
         <div id="logo">
-            <img src="img/vector-binoculars-man-6.png">
+            <img src="img/logo.png">
         </div>
-
         <div id="websiteTitle">
             <h1>Elite School</h1>
             <p>School portal</p>
         </div>
-
         </div>
-
         <div id="navOptions">
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About us</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
                 </ul>
             </nav>
-
         </div>
-
         <div id="icons">
-            <a href=""><img src="img/2.png" alt="instagramIcon"></a>
-            <a href=""><img src="img/3.png" alt="linkedInIcon"></a>
-            <a href=""><img src="img/5.png" alt="emailIcon"></a>
-
+            <a href=""><img src="img/insta.png" alt="instagramIcon"></a>
+            <a href=""><img src="img/linked.png" alt="linkedInIcon"></a>
+            <a href=""><img src="img/email.png" alt="emailIcon"></a>
         </div>
-
        
     </header>
-
 
     <main>
 
@@ -133,31 +131,37 @@
 
                 </fieldset>
                 <br>
+                
                 <fieldset id="submitField">
 
                     <button type="submit">Add Student</button>
-                   
+                    <fieldset id="showstatistics">
+                    <button type="button" > Show Statistics </button>
+                </fieldset>
 
                 </fieldset>
 
 
-                <fieldset id= "showstatistics"> 
-                    <button type="button" > Show statistics </button>
-                 </fieldset> 
-                 
 
             </form>
         </section>
         <section>
+            <fieldset id="results">
             <table id="studentinfo">
                
 
             </table>
+        </fieldset>
         </section>
         <section>
             <canvas id="genderChart" ></canvas>
+
             
-            <button id="addDataset">Add Dataset</button>
+            
+
+          
+          
+
 
 
 

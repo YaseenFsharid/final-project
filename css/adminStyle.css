@@ -22,7 +22,7 @@ input[type='number'] {
 
 
 #leftNav {
-    margin-top: 85px ;
+    margin-top: 62px ;
     background-color:#400d16;
     width: 25%;
     height: 600px;
@@ -32,14 +32,15 @@ input[type='number'] {
 
 #leftNav h1 {
     font-weight: bolder;
-    color: beige;
+    color: #f5f5f5;
     font-weight: bold;
     font-size: 40px;
     padding-top: 220px;
     text-align: center;
-    font-family: 'News Cycle', sans-serif;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* font-family: 'News Cycle', sans-serif; */
+    font-family: 'Sen', sans-serif;
+    margin-left: 8px;
+    margin-right: 8px;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
@@ -51,10 +52,10 @@ input[type='number'] {
 
 #leftNav p {
     font-weight: lighter;
-    color: beige;
-    padding-top: 30px;
+    color: #f5f5f5;
+    /* padding-top: 20px; */
     text-align: center;
-    font-family: 'News Cycle', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
@@ -65,7 +66,7 @@ input[type='number'] {
 
 
 #studentFillForm {
-    margin-top: 85px ;
+    margin-top: 62px ;
     float: right;
     width: 75%;
     height: 600px;
@@ -77,6 +78,7 @@ input[type='number'] {
     animation:100s scroll infinite linear;
    
     font-family: 'News Cycle', sans-serif;
+    margin-bottom: 50px;
     
 
     
@@ -119,25 +121,12 @@ input[type='number'] {
     padding: 50px;
     text-align: center;
 }
+#submitField{
+  margin-top: 15px;
+ 
 
-button[type="submit"]{
-
-    width: 20%;
-
-    padding:10px;
-
-
-    border-radius:5px;
-    border:none;
-    outline:none;
-
-    font-size:13px;
-    font-weight:700;
-
-    background:#145e97;
-    color:#FFF;
-    opacity:0.8;
 }
+
 
 button[type="submit"]:hover{
     cursor:pointer;
@@ -188,7 +177,6 @@ button[type="submit"]:hover{
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
     height: 240px;
-
 }
 
 #grades legend {
@@ -269,5 +257,63 @@ table th {
 
 
 }
+#results{
+  
+  border: #f5f5f5 solid 1px;
+    border-radius: 5px;
+   
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
+    
+    width: 200px;
+    margin-left: 400px;
+    margin-top: 5000px;
+  }
+    
 
 
+
+
+button[type="button"]{
+float: right;
+  width: 150px;
+
+  padding:10px ;
+  margin-right: 90px;
+
+  border-radius:5px;
+  border:none;
+  outline:none;
+
+  font-size:13px;
+  font-weight:700;
+
+  background:#145e97;
+  color:#FFF;
+  opacity:0.8;
+}
+
+button[type="button"]:hover{
+  cursor:pointer;
+    opacity:1;
+}
+
+
+button[type="submit"]{
+  float: left;
+    width: 150px;
+margin-left: 90px;
+    padding:10px;
+
+
+    border-radius:5px;
+    border:none;
+    outline:none;
+
+    font-size:13px;
+    font-weight:700;
+
+    background:#145e97;
+    color:#FFF;
+    opacity:0.8;
+}
