@@ -7,7 +7,6 @@ var student1String = localStorage.getItem("studentinfo");
 if (student1String) {
   var sT = JSON.parse(student1String);
 }
-console.log(sT);
 
 // the submit event handler for the status table 
 var form = document.getElementById("parentForm");
@@ -25,12 +24,8 @@ function getVaildation() {
 
 
       if (clicks > 1) {
-        console.log("clicks", clicks);
         form.removeEventListener("submit", getVaildation);
-        console.log(form.removeEventListener("submit", getVaildation));
-
       }
-      console.log("true");
 
 
       var STDtable = document.getElementById("tableInfo");
@@ -74,12 +69,10 @@ function getVaildation() {
         // total = total + parseInt(sT[k].scienceMark[k]);
         
       }
-      // console.log(total, "total");
       var td8 = document.createElement("td");
       td8.textContent = sT[k].avg;
       data1.appendChild(td8);
-      console.log(sT[k].avg);
-      // STDtable.deleteRow(-1);
+
       var td9 = document.createElement("td");
       data1.appendChild(td9);
       td9.setAttribute("border-collapse", " collapse");
@@ -92,7 +85,6 @@ function getVaildation() {
 
       AddChart();
       function AddChart() {
-        console.log('yaseenasac', sT[k].mathMark);
         var ctx2 = document.getElementById('gradesChart').getContext('2d');
         var gradesChart = new Chart(ctx2, {
           type: 'line',
@@ -175,7 +167,6 @@ function createHeader() {
   var th = document.createElement("th");
   tr.appendChild(th);
   th.textContent = "Student Name";
-  console.log(th);
   var th1 = document.createElement("th");
   tr.appendChild(th1);
   th1.textContent = "Student ID";

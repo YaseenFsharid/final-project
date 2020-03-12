@@ -9,9 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/adminStyle.css">
+
 
     <!-- googleFont -->
     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
@@ -21,8 +19,13 @@
     <link href="https://fonts.googleapis.com/css?family=Sofadi+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua&display=swap" rel="stylesheet">
 
+    <!-- tabIcon -->
+    <link rel="icon" href="img/logo.png">
 
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/adminStyle.css">
 
 </head>
 
@@ -69,21 +72,19 @@
                         Personal Info
                     </legend>
 
-                    <!-- <label for="studentName">Student name :</label> -->
-                    <input type="text" name="stdname" id="studentName" placeholder="Student name" required><br> <br>
-                    <!-- <label for="">Gender :</label> -->
-
+                    <input type="text" name="stdname" id="studentName" placeholder="Student name" required>
+                    <br> <br>
                     <input type="radio" id="maleRadio" name="gender" value="Male">
                     <label for="maleRadio"> Male</label>
                     <input type="radio" id="femaleRadio" name="gender" value="Female">
-                    <label for="femaleRadio">Female</label><br> <br>
-                    <!-- <label for="studentId">Student ID:</label> -->
-                    <input type="text" name="stdID" placeholder="Student ID" required min="1000000"
-                        max="99999999"><br><br>
-                    <!-- <label for="parentId">Parent ID:</label> -->
+                    <label for="femaleRadio">Female</label>
+                    <br> <br>
+                    <input type="text" name="stdID" placeholder="Student ID" required min="1000000" max="99999999">
+                    <br><br>
                     <input type="text" name="prntID" placeholder="Parent ID" required min="1000" max="9999">
 
                 </fieldset>
+
                 <fieldset id="grades">
                     <legend>
                         Grades
@@ -95,7 +96,6 @@
                                 <th>First exam</th>
                                 <th>Seconed exam</th>
                                 <th>Final exam</th>
-                                <!-- <th>Total</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -135,8 +135,6 @@
 
                         </tfoot>
                     </table>
-
-
                 </fieldset>
 
                 <fieldset id="feedBackField">
@@ -146,6 +144,7 @@
                         required></textarea>
 
                 </fieldset>
+
                 <br>
 
                 <fieldset id="submitField">
@@ -156,48 +155,38 @@
                     </fieldset>
 
                 </fieldset>
-
-
-
             </form>
+
         </section>
+
+
         <section id="tableArea">
+
             <fieldset id="results">
                 <table id="studentinfo">
-
-
                 </table>
             </fieldset>
+
         </section>
+
         <section id="chartArea">
             <canvas id="genderChart"></canvas>
-
-
-
-
-
-
-
-
-
-
-            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         </section>
-
-
 
 
 
     </main>
 
     <footer>
-
         <p>All rights reserved copyright &copy;2020</p>
-
-
     </footer>
-    <!-- <script src="js/java.js"></script> -->
+
+
+
+    <!-- javaScript -->
     <script src="js/java2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
 </body>
 
 </html>
