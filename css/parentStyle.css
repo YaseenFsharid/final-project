@@ -18,8 +18,12 @@ border:none;
 outline:none;
 font-size:13px;
 font-family: 'Rajdhani', sans-serif;
+width: 30%;
 
 }
+
+
+
 
 
 #leftNavParent {
@@ -31,7 +35,6 @@ float: left;
 box-shadow: 0px 4px 3px rgba(255, 255, 255, 0.054),
 0px 8px 13px rgba(255, 255, 255, 0.054),
 0px 18px 15px rgba(255, 255, 255, 0.1);
-
 }
 
 
@@ -48,9 +51,14 @@ margin-right: 10px;
 text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 0px 8px 13px rgba(0,0,0,0.1),
 0px 18px 23px rgba(0,0,0,0.1);
-
+transition: all .2s ease-in-out;
 
 }
+
+#leftNavParent h1:hover{
+  transform: scale(1.02);
+}
+
 
 
 
@@ -64,10 +72,13 @@ text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
 0px 8px 13px rgba(0,0,0,0.1),
 0px 18px 23px rgba(0,0,0,0.1);
 padding: 50px;
-
+transition: all .2s ease-in-out;
 
 }
 
+#leftNavParent p:hover{
+  transform: scale(1.1);
+}
 
 #parentFillForm {
 margin-top: 60px ;
@@ -161,9 +172,9 @@ margin-top: 250px;
         font-family: 'News Cycle', sans-serif;
 }
 
-button[type="submit"]:hover{
+#parentButton[type="submit"]:hover{
     cursor:pointer;
-      opacity:1;
+    opacity:1;
 }
 /* ------------------------------------------------- */
 
@@ -176,6 +187,8 @@ button[type="submit"]:hover{
   -ms-animation:100s scroll infinite linear;
   animation:100s scroll infinite linear;
   padding-top: 720px;
+  padding-bottom: 50px;
+
 
 }
 
@@ -184,6 +197,17 @@ button[type="submit"]:hover{
   margin-right: auto;
 
 }
+
+#tableInfo tr{
+
+transition: all .2s ease-in-out;
+
+}
+
+#tableInfo tr:hover{
+  transform: scale(1.02);
+}
+
 
 #gradesChart {
   margin: 0px auto;

@@ -23,9 +23,7 @@ header {
 
 #websiteTitle {
     width: 170px;
-    float: left;
-    
-    
+    float: left;    
     
 }
 
@@ -172,6 +170,12 @@ header {
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
 
+    transition: all .2s ease-in-out;
+  
+}
+  
+#leftNavMain h1:hover{
+    transform: scale(1.05);
 }
 
 
@@ -187,8 +191,13 @@ header {
     padding: 50px;
 
 
+    transition: all .2s ease-in-out;
+  
 }
-
+  
+#leftNavMain p:hover{
+    transform: scale(1.05);
+}
 
 
 #loginSection {

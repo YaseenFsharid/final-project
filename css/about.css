@@ -53,7 +53,7 @@ main section div ul div {
     margin: 10px;
     padding: 20px;
     width: 150px;
-    height: 230px;
+    height: 200px;
     float: left;
 
 }
@@ -88,6 +88,12 @@ main section div ul div{
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
 
+    transition: all .2s ease-in-out;
+  
+}
+  
+main section div ul div:hover{
+    transform: scale(1.05);
 }
 
 
@@ -96,11 +102,17 @@ main section div ul div{
     margin-left: 20px;
     width: 15px;
     text-align: center;
-
 }
 
 #iconsI a img {
     width: 25px;
+
+    transition: all .2s ease-in-out;
+  
+}
+  
+#iconsI a img:hover{
+    transform: scale(1.3);
 }
 
 

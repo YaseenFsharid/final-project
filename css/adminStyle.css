@@ -6,6 +6,7 @@ input[type='text'] {
         outline:none;
         font-size:13px;
         font-family: 'News Cycle', sans-serif;
+        width: 150px;
 
 }
 
@@ -17,6 +18,7 @@ input[type='number'] {
     outline:none;
     font-size:13px;
     font-family: 'News Cycle', sans-serif;
+
 
 }
 
@@ -50,8 +52,13 @@ input[type='number'] {
     0px 18px 23px rgba(0,0,0,0.1);
 
 
-}
+    transition: all .2s ease-in-out;
 
+  }
+  
+  #leftNav h1:hover{
+    transform: scale(1.02);
+  }
 
 
 #leftNav p {
@@ -66,6 +73,12 @@ input[type='number'] {
     padding: 50px;
 
 
+transition: all .2s ease-in-out;
+
+}
+
+#leftNav p:hover{
+  transform: scale(1.02);
 }
 
 
@@ -164,8 +177,9 @@ button[type="submit"]:hover{
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
     height: 210px;
-    margin-right: 128px;
+    margin-right: 5%;
     float: left;
+    width: 20%;
 }
 
 #personalInfo legend {
@@ -179,7 +193,7 @@ button[type="submit"]:hover{
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
     height: 250px;
-    width: 600px;
+    width: 70%;
 }
 
 #grades legend {
@@ -196,6 +210,7 @@ button[type="submit"]:hover{
     box-shadow: rgba(0, 0, 0, 0.233) 3px 3px;
     /* float: left; */
     margin-top: 30px;
+    width: 100%;
 
     
 }
@@ -246,6 +261,17 @@ table {
     color: rgb(34, 34, 34);
 
 }
+
+tr{
+
+  transition: all .2s ease-in-out;
+  
+}
+  
+ tr:hover{
+    transform: scale(1.02);
+}
+  
 
 table td {
     padding: 5px;
