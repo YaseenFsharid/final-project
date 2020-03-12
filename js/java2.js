@@ -51,14 +51,17 @@ var gradeS1 = 0;
 var gradeS2 = 0;
 var gradeS3 = 0;
 var scienceMark = [];
+
+var studentString;
+
 // this function sent the students to the local storage
 function updateStudent() {
-  var studentString = JSON.stringify(Student.all);
+  studentString = JSON.stringify(Student.all);
   localStorage.setItem("studentinfo", studentString);
 }
 // this function get the students from the local storage
 function getStudent() {
-  var studentString = localStorage.getItem("studentinfo");
+  studentString = localStorage.getItem("studentinfo");
   if (studentString ) {
     Student.all = JSON.parse(studentString);
       makingHeader();
@@ -137,7 +140,7 @@ adminForm.addEventListener("submit", addstudent);
 // this event fuction increase the clicks and call the header function and then get and store the values from the form 
 function addstudent(event) {
   event.preventDefault();
-  clicks++
+  clicks++;
   if (clicks == 1 && !studentString) {
     makingHeader();
   }

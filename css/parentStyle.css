@@ -169,7 +169,12 @@ button[type="submit"]:hover{
 
 
 #tableAreaParent{
-  background-color: rgb(22, 22, 22);
+  background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png);
+  -webkit-animation:100s scroll infinite linear;
+  -moz-animation:100s scroll infinite linear;
+  -o-animation:100s scroll infinite linear;
+  -ms-animation:100s scroll infinite linear;
+  animation:100s scroll infinite linear;
   padding-top: 720px;
 
 }
@@ -186,7 +191,12 @@ button[type="submit"]:hover{
 }
 
 #chartAreaParent{
-  background-color: rgb(22, 22, 22);
+  background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png);
+  -webkit-animation:100s scroll infinite linear;
+  -moz-animation:100s scroll infinite linear;
+  -o-animation:100s scroll infinite linear;
+  -ms-animation:100s scroll infinite linear;
+  animation:100s scroll infinite linear;
   width: 100%;
 }
 
