@@ -1,0 +1,97 @@
+main section{
+    background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png);
+    -webkit-animation:100s scroll infinite linear;
+    -moz-animation:100s scroll infinite linear;
+    -o-animation:100s scroll infinite linear;
+    -ms-animation:100s scroll infinite linear;
+    animation:100s scroll infinite linear;
+    height: 600px;
+}
+
+main section h1{
+    text-align: center;
+    font-weight: bolder;
+    color: #dfdfdf;
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 100px;
+    font-family: 'Rajdhani', sans-serif;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+main section div {
+
+    padding-top: 20px;
+    text-align: center;
+    margin-left: 170px;
+}
+
+
+
+main section div ul div {
+    background-color: rgba(255, 255, 255, 0.205);
+    margin: 10px;
+    padding: 20px;
+    width: 150px;
+    height: 230px;
+    float: left;
+
+}
+
+main section div ul div ul li{
+    text-align: center;
+    font-weight: bold;
+    color: #dfdfdf;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+main section div ul div{
+    text-align: center;
+    font-weight: bold;
+    color: #400d16;
+    font-weight: bold;
+    font-size: 22px;
+    padding-top: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+
+#iconsI a {
+    display: inline-block;
+    margin-left: 20px;
+    width: 15px;
+    text-align: center;
+
+}
+
+#iconsI a img {
+    width: 25px;
+}
+
+
+#iconsI {
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 50px;
+
+}
