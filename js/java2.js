@@ -116,7 +116,6 @@ function getStudent() {
       var td8 = document.createElement("td");
       td8.textContent = Student.all[b].avg;
       data1.appendChild(td8);
-      console.log(Student.all[b].avg);
       
 
       var td9 = document.createElement("td");
@@ -146,7 +145,6 @@ function addstudent(event) {
   }
   if (clicks >= 1) {
     stdname = event.target.stdname.value;
-    console.log(stdname);
     studentId = event.target.stdID.value;
     gender = event.target.gender.value;
     parentId = event.target.prntID.value;
@@ -159,7 +157,6 @@ function addstudent(event) {
     mathMark.push(grade1, grade2, grade3);
     mathTotal = parseInt(grade1) + parseInt(grade2) + parseInt(grade3);
 
-    console.log(mathMark);
     //second subjiect
     gradeE1 = event.target.FirstExamEnglish.value;
     gradeE2 = event.target.secondExamEnglish.value;
@@ -180,7 +177,6 @@ function addstudent(event) {
     // avg.push(avg);
   }
   STD = new Student(stdname, studentId, gender, parentId, mathMark, englishMark, scienceMark, feedBack, mathTotal, scienceTotal, englishTotal, avg);
-  console.log(Student.all, STD);
   renderTable();
   updateStudent();
 }
@@ -192,7 +188,6 @@ function makingHeader() {
   var th = document.createElement("th");
   tr.appendChild(th);
   th.textContent = "Student Name";
-  console.log(th);
   var th1 = document.createElement("th");
   tr.appendChild(th1);
   th1.textContent = "Student ID";
@@ -232,7 +227,6 @@ function renderTable() {
   var td = document.createElement('td');
   data1.appendChild(td);
   td.textContent = STD.studentName;
-  console.log(STD.studentName);
   var td2 = document.createElement('td');
   data1.appendChild(td2);
   td2.textContent = STD.studentId;
@@ -275,7 +269,6 @@ function renderTable() {
 
 
 
-  console.log(total, "total", avg);
   var td8 = document.createElement("td");
   data1.appendChild(td8);
   avg = ((mathTotal + englishTotal + scienceTotal)/3);

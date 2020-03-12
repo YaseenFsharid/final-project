@@ -105,7 +105,7 @@ header {
   right: 0;
   overflow: hidden;
   width:0;
-  opacity: 0.8;
+  opacity: 1;
   height: 100%;
   transition: 1s ease;
   }
@@ -124,13 +124,13 @@ header {
   
 #welcoming h1{
     font-weight: bolder;
-    color: #29292e;
+    color: #222222;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                  0px 8px 13px rgba(0,0,0,0.1),
                  0px 18px 23px rgba(0,0,0,0.1);
     font-size: 70px;
     
-    font-family: 'Chela One', cursive;
+    font-family: 'Teko', sans-serif;
 }
 
 #welcoming p{
@@ -139,7 +139,8 @@ header {
     font-size: 20px;
    padding-top: 80px;
  margin-top: 30px;
- font-family: 'Pangolin', cursive;
+ font-family: 'Rajdhani', sans-serif;
+
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
