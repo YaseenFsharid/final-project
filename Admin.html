@@ -4,18 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     <!-- googleFont -->
-     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/adminStyle.css">
     <title>Admin</title>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/adminStyle.css">
+
+    <!-- googleFont -->
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sofadi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua&display=swap" rel="stylesheet">
+
+
+
+
 </head>
 
 <body>
@@ -32,7 +40,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +51,7 @@
         </div>
 
     </header>
-    
+
     <main>
 
         <section id="leftNav">
@@ -59,18 +67,19 @@
                 <fieldset id="personalInfo">
                     <legend>
                         Personal Info
-                    </legend>   
+                    </legend>
 
                     <!-- <label for="studentName">Student name :</label> -->
                     <input type="text" name="stdname" id="studentName" placeholder="Student name" required><br> <br>
                     <!-- <label for="">Gender :</label> -->
-                    
+
                     <input type="radio" id="maleRadio" name="gender" value="Male">
                     <label for="maleRadio"> Male</label>
                     <input type="radio" id="femaleRadio" name="gender" value="Female">
                     <label for="femaleRadio">Female</label><br> <br>
                     <!-- <label for="studentId">Student ID:</label> -->
-                    <input type="number" name="stdID" placeholder="Student ID" required min="1000000" max="99999999"><br><br>
+                    <input type="number" name="stdID" placeholder="Student ID" required min="1000000"
+                        max="99999999"><br><br>
                     <!-- <label for="parentId">Parent ID:</label> -->
                     <input type="number" name="prntID" placeholder="Parent ID" required min="1000" max="9999">
 
@@ -94,25 +103,31 @@
                                 <td>Math</td>
 
                                 <td><input type="number" id="firstExam" placeholder="0" required min="0" max="25"></td>
-                                <td><input type="number" id="secondExam" placeholder="0" required  min="0" max="25"></td>
-                                <td><input type="number" id="thirdExam" placeholder="0" required  min="0" max="50"></td>
+                                <td><input type="number" id="secondExam" placeholder="0" required min="0" max="25"></td>
+                                <td><input type="number" id="thirdExam" placeholder="0" required min="0" max="50"></td>
 
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>English</td>
 
-                                <td><input type="number" id="FirstExamEnglish" placeholder="0" required min="0" max="25"></td>
-                                <td><input type="number" id="secondExamEnglish" placeholder="0" required min="0" max="25"></td>
-                                <td><input type="number" id="ThirdExamEnglish" placeholder="0" required min="0" max="50"></td>
+                                <td><input type="number" id="FirstExamEnglish" placeholder="0" required min="0"
+                                        max="25"></td>
+                                <td><input type="number" id="secondExamEnglish" placeholder="0" required min="0"
+                                        max="25"></td>
+                                <td><input type="number" id="ThirdExamEnglish" placeholder="0" required min="0"
+                                        max="50"></td>
                                 <td id="totalMark"></td>
                             </tr>
                             <tr>
                                 <td>Science</td>
 
-                                <td><input type="number" id="firstExamScience" placeholder="0" required  min="0" max="25"></td>
-                                <td><input type="number" id="secondExamScience" placeholder="0" required  min="0" max="25"></td>
-                                <td><input type="number" id="ThirdExamScience" placeholder="0" required  min="0" max="50"></td>
+                                <td><input type="number" id="firstExamScience" placeholder="0" required min="0"
+                                        max="25"></td>
+                                <td><input type="number" id="secondExamScience" placeholder="0" required min="0"
+                                        max="25"></td>
+                                <td><input type="number" id="ThirdExamScience" placeholder="0" required min="0"
+                                        max="50"></td>
                                 <td id="totalMark"></td>
                             </tr>
                         </tbody>
@@ -120,24 +135,25 @@
 
                         </tfoot>
                     </table>
-                    
+
 
                 </fieldset>
 
                 <fieldset id="feedBackField">
                     <legend>Feedback</legend>
 
-                    <textarea name="feedback" id="feedback" cols="120" rows="8" placeholder=" Student Feedback" required></textarea>
+                    <textarea name="feedback" id="feedback" cols="120" rows="8" placeholder=" Student Feedback"
+                        required></textarea>
 
                 </fieldset>
                 <br>
-                
+
                 <fieldset id="submitField">
 
                     <button type="submit">Add Student</button>
                     <fieldset id="showstatistics">
-                    <button type="button" > Show Statistics </button>
-                </fieldset>
+                        <button type="button"> Show Statistics </button>
+                    </fieldset>
 
                 </fieldset>
 
@@ -147,20 +163,20 @@
         </section>
         <section id="tableArea">
             <fieldset id="results">
-            <table id="studentinfo">
-               
+                <table id="studentinfo">
 
-            </table>
-        </fieldset>
+
+                </table>
+            </fieldset>
         </section>
         <section id="chartArea">
-            <canvas id="genderChart" ></canvas>
+            <canvas id="genderChart"></canvas>
 
-            
-            
 
-          
-          
+
+
+
+
 
 
 

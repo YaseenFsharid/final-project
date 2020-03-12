@@ -26,18 +26,22 @@ header {
     float: left;
     
     
+    
 }
 
 #websiteTitle h1 {
     font-size: 20px;
     margin-top: 15px;
-    font-family: 'News Cycle', sans-serif;
+    /* font-family: 'News Cycle', sans-serif; */
+    font-family: 'Sofadi One', cursive;
 
     
 }
 #websiteTitle p {
-    font-size: 12px;
-    font-family: 'News Cycle', sans-serif;
+    font-size: 15px;
+    /* font-family: 'News Cycle', sans-serif; */
+    font-family: 'Glass Antiqua', cursive;
+    
 
 }
 
@@ -48,6 +52,7 @@ header {
 }
 
 #navOptions ul li {
+    font-family: 'Rajdhani', sans-serif;
     display: inline-block;
     margin-right: 50px;
     font-size: 13px;
@@ -125,8 +130,9 @@ header {
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                  0px 8px 13px rgba(0,0,0,0.1),
                  0px 18px 23px rgba(0,0,0,0.1);
-    font-size: 50px;
-    font-family: 'Rajdhani', sans-serif;
+    font-size: 70px;
+    
+    font-family: 'Chela One', cursive;
 }
 
 #welcoming p{
@@ -134,8 +140,8 @@ header {
     color: #29292e;
     font-size: 20px;
    padding-top: 80px;
- 
-   font-family: 'Rajdhani', sans-serif;
+ margin-top: 30px;
+ font-family: 'Pangolin', cursive;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
@@ -325,7 +331,6 @@ footer {
     clear: both;
     position: relative;
     height: 60px;
-    /* margin-top: -100px; */
     background-color:rgb(197, 189, 189);
     color: #29292e;
     font-family: 'Stylish', sans-serif;
@@ -335,14 +340,18 @@ footer {
 }
 
 footer h5 {
+    font-family: 'Stylish', sans-serif;
     float: right;
+    font-size: 17px;
     margin-right: 50px;
     padding-top: 50px;
 }
 
 
 footer p { 
+    font-family: 'Stylish', sans-serif;
     text-align: center;
+    font-size: 17px;
     margin-left: 50px;
     padding-top: 25px;
 }
