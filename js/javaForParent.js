@@ -96,7 +96,7 @@ function getVaildation() {
               label: ["Math Marks"],
               data: sT[k].mathMark,
               backgroundColor:
-                'rgba(57,116,162,0.2)',
+                'rgba(57,116,162)',
 
 
               borderColor:
@@ -109,7 +109,7 @@ function getVaildation() {
               label: 'science',
               data: sT[k].scienceMark,
               backgroundColor:
-                'rgba(174,174,174,0.2)',
+                'rgba(174,174,174)',
 
 
               borderColor:
@@ -122,7 +122,7 @@ function getVaildation() {
               label: 'english',
               data: sT[k].englishMark,
               backgroundColor:
-                'rgba(64,13,22,0.2)',
+                'rgba(64,13,22)',
 
 
               borderColor:
