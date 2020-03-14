@@ -1,3 +1,7 @@
+header{
+    background-color: #f5f5f5c0 !important;
+}
+
 main section{
     background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png);
     -webkit-animation:100s scroll infinite linear;
