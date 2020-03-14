@@ -87,7 +87,7 @@ transition: all .2s ease-in-out;
     float: right;
     width: 75%;
     height: 600px;
-    background: url(/img/footer_lodyas.png);
+    background: url(../img/white.png);
     -webkit-animation:100s scroll infinite linear;
     -moz-animation:100s scroll infinite linear;
     -o-animation:100s scroll infinite linear;
