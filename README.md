@@ -14,3 +14,6 @@ In the parent's page, the website will ask for him to enter a special ID to acce
 The parent's can also send a feed back that will show in the admin's page and the admin can also send a feedback for the parents.
 
 ## A list of any libraries, frameworks, or packages that your application :
+- Visual Studio Code .
+- Ubuntu .
+-gitHub pages.
