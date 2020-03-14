@@ -85,7 +85,7 @@ margin-top: 60px ;
 float: right;
 width: 75%;
 height: 600px;
-background: url(/img/footer_lodyas.png);
+background: url(./img/footer_lodyas.png);
 -webkit-animation:100s scroll infinite linear;
 -moz-animation:100s scroll infinite linear;
 -o-animation:100s scroll infinite linear;
@@ -211,12 +211,7 @@ transition: all .2s ease-in-out;
 
 #gradesChart {
   margin: 0px auto;
-  width: 70% !important; 
-  height: 70% !important;
-}
-
-#gradesChart label{
-  font-size: 20px;
+  width: 50%;
 }
 
 #chartAreaParent{
@@ -246,8 +241,5 @@ transition: all .2s ease-in-out;
   0px 18px 23px #400d164f;
   font-family: 'Rajdhani', sans-serif;
 
-  
-}
-canvas{
   
 }
