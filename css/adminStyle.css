@@ -374,16 +374,16 @@ button[type="submit"]{
   border-bottom: white solid 1px;
   font-size: 20px;
   padding: 10px;
-  color: #f5f5f5;
+  color: #e4a7a7;
   font-family: 'Rajdhani', sans-serif;
   text-align: center;
 
 }
 #studentinfo th{
-  color: #f5f5f5;
+  color: #e2d1d1;
   font-size: 25px;
-  text-shadow: 0px 4px 3px #400d164f,
-  0px 8px 13px #400d164f,
+  text-shadow: 0px 1px 2px #400d164f,
+  0px 6px 7px #400d164f,
   0px 18px 23px #400d164f;
   
 }
